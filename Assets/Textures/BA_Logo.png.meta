@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: f1d2db91a5e856d49a5e00c79cb06c22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6194027747257274411
+    second: BA_Logo 1_0
+  - first:
+      213: 4665962684806097672
+    second: BA_Logo 1_1
+  - first:
+      213: 6161618328646632589
+    second: BA_Logo 1_2
+  - first:
+      213: 9181964738821942384
+    second: BA_Logo 1_3
+  - first:
+      213: 7827232050360708177
+    second: BA_Logo 1_4
+  - first:
+      213: 3633701114455437743
+    second: BA_Logo 1_5
+  - first:
+      213: 5788112688898819214
+    second: BA_Logo 1_6
+  - first:
+      213: 346716563231758410
+    second: BA_Logo 1_7
+  - first:
+      213: 1805931852443212238
+    second: BA_Logo 1_8
+  - first:
+      213: -5310714212818824511
+    second: BA_Logo 1_9
+  - first:
+      213: 2243074875086278662
+    second: BA_Logo 1_10
+  - first:
+      213: -5940358044542087072
+    second: BA_Logo 1_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BA_Logo 1_0
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1008
+        width: 469
+        height: 761
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df21dbc4946a0aa0800000000000000
+      internalID: -6194027747257274411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_1
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1007
+        width: 156
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b681b2754d0c040800000000000000
+      internalID: 4665962684806097672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_2
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1005
+        width: 488
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84c4886937728550800000000000000
+      internalID: 6161618328646632589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_3
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1013
+        width: 430
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ce4a52844ec6f70800000000000000
+      internalID: 9181964738821942384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_4
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 1263
+        width: 9
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c6d40541aef9c60800000000000000
+      internalID: 7827232050360708177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_5
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 1232
+        width: 9
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1be0359ef7d6230800000000000000
+      internalID: 3633701114455437743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 89
+        width: 632
+        height: 902
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84ceb5e2d1835050800000000000000
+      internalID: 5788112688898819214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_7
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 717
+        width: 143
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a485c2590e8cfc400800000000000000
+      internalID: 346716563231758410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_8
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 231
+        width: 384
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9d0799375ff0910800000000000000
+      internalID: 1805931852443212238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_9
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 231
+        width: 332
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c2d0519f8d8c46b0800000000000000
+      internalID: -5310714212818824511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_10
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 242
+        width: 123
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6001f1ee6b0012f10800000000000000
+      internalID: 2243074875086278662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BA_Logo 1_11
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 215
+        width: 415
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0605f64f4db9f8da0800000000000000
+      internalID: -5940358044542087072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BA_Logo 1_0: -6194027747257274411
+      BA_Logo 1_1: 4665962684806097672
+      BA_Logo 1_10: 2243074875086278662
+      BA_Logo 1_11: -5940358044542087072
+      BA_Logo 1_2: 6161618328646632589
+      BA_Logo 1_3: 9181964738821942384
+      BA_Logo 1_4: 7827232050360708177
+      BA_Logo 1_5: 3633701114455437743
+      BA_Logo 1_6: 5788112688898819214
+      BA_Logo 1_7: 346716563231758410
+      BA_Logo 1_8: 1805931852443212238
+      BA_Logo 1_9: -5310714212818824511
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

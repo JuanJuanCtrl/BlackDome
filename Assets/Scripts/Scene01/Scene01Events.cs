@@ -90,6 +90,37 @@ public class Scene01Events : MonoBehaviour
             case 7:
                 textToSpeak = "They’re definitely getting him…";
                 break;
+            case 8:
+                textToSpeak = "The loud cacophony of mixed opinions seemed to last forever, until a resonant sound shut everyone up.";
+                break;
+            case 9:
+                textToSpeak = "Three long beeps echoed and bounced off the surface of the dome, a signal for something perhaps?";
+                break;
+            case 10:
+                textToSpeak = "Anyone who stood around him just a few seconds ago were now walking away, resuming their daily lives as if nothing had ever happened.";
+                break;
+            case 11:
+                textToSpeak = "He tried to recall how he’d gotten into this situation, but nothing came.";
+                break;
+            case 12:
+                textToSpeak = "Tiny fragments floated around his brain, but nothing he could use to understand where he was, or who he even was.";
+                break;
+             case 13:
+                textToSpeak = "Then, he heard two voices. One male, one female:";
+                break;
+            case 14:
+                textToSpeak = "He’s alive. Subject A10, name’s Bay Ausman.";
+                break;
+            case 15:
+                textToSpeak = "Yeah, he’s the one — definitely.";
+            case 16:
+                textToSpeak = "Do you think it’s really possible, I mean—";
+            case 17:
+                textToSpeak = "Yeah, this is the one. He’ll soon learn that, but for now… let’s take him to the place.";
+            case 18:
+                textToSpeak = "Yeah, let’s go.";
+            case 19:
+                textToSpeak = "...";
 
             default:
                 yield break;

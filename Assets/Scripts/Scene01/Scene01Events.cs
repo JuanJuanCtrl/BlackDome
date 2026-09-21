@@ -5,24 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class Scene01Events : MonoBehaviour
 {
+    [Header("UI")]
     public GameObject fadeScreenIn;
     public GameObject textBox;
+    public GameObject mainTextObject;
+    public GameObject nextButton;
+    public GameObject charName;
+    public GameObject fadeOut;
 
+    [Header("Pictures")]
+    public GameObject Picture1;
+    public GameObject Picture2;
+    public GameObject Picture3;
+
+    [Header("Audio")]
     [SerializeField] AudioSource girlSigh;
+
+    [Header("Dialogue")]
     [SerializeField] string textToSpeak;
     [SerializeField] int currentTextLength;
     [SerializeField] int textLength;
-    [SerializeField] GameObject mainTextObject;
-    [SerializeField] GameObject nextButton;
+
+    // Current position in the event
     [SerializeField] int eventPos = 0;
-    [SerializeField] GameObject charName;
-    [SerializeField] GameObject fadeOut;
 
     // Index within the intro dialogue sequence
     int introIndex = 0;
-
-    // Index within the dialogue sequence
-    int dialogueIndex = 0;
 
     void Update()
     {
@@ -90,37 +98,54 @@ public class Scene01Events : MonoBehaviour
             case 7:
                 textToSpeak = "They’re definitely getting him…";
                 break;
+
             case 8:
                 textToSpeak = "The loud cacophony of mixed opinions seemed to last forever, until a resonant sound shut everyone up.";
                 break;
+
             case 9:
                 textToSpeak = "Three long beeps echoed and bounced off the surface of the dome, a signal for something perhaps?";
                 break;
+
             case 10:
                 textToSpeak = "Anyone who stood around him just a few seconds ago were now walking away, resuming their daily lives as if nothing had ever happened.";
                 break;
+
             case 11:
                 textToSpeak = "He tried to recall how he’d gotten into this situation, but nothing came.";
                 break;
+
             case 12:
                 textToSpeak = "Tiny fragments floated around his brain, but nothing he could use to understand where he was, or who he even was.";
                 break;
-             case 13:
+
+            case 13:
                 textToSpeak = "Then, he heard two voices. One male, one female:";
                 break;
+
             case 14:
                 textToSpeak = "He’s alive. Subject A10, name’s Bay Ausman.";
                 break;
+
             case 15:
                 textToSpeak = "Yeah, he’s the one — definitely.";
+                break;
+
             case 16:
                 textToSpeak = "Do you think it’s really possible, I mean—";
+                break;
+
             case 17:
                 textToSpeak = "Yeah, this is the one. He’ll soon learn that, but for now… let’s take him to the place.";
+                break;
+
             case 18:
                 textToSpeak = "Yeah, let’s go.";
+                break;
+
             case 19:
                 textToSpeak = "...";
+                break;
 
             default:
                 yield break;
@@ -134,7 +159,7 @@ public class Scene01Events : MonoBehaviour
 
         currentTextLength = textToSpeak.Length;
 
-        // Reset text counter if TextCreator allows it
+        // Reset text counter
         TextCreator.charCount = 0;
 
         // Start typewriter effect
@@ -154,78 +179,77 @@ public class Scene01Events : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        // -------------------------------------------------
+        // PICTURE 1
+        // "Who is this?"
+        // Fade Picture1 out, then disable it.
+        // -------------------------------------------------
+        if (index == 1)
+        {
+            yield return StartCoroutine(FadeAndDisable(Picture1));
+        }
+
+        // -------------------------------------------------
+        // PICTURE 2
+        // "Anyone who stood around him..."
+        // Fade Picture2 out, then disable it.
+        // -------------------------------------------------
+        if (index == 10)
+        {
+            yield return StartCoroutine(FadeAndDisable(Picture2));
+        }
+
+        // -------------------------------------------------
+        // PICTURE 3
+        // "He's alive. Subject A10..."
+        // Fade Picture3 out, then disable it.
+        // -------------------------------------------------
+        if (index == 14)
+        {
+            yield return StartCoroutine(FadeAndDisable(Picture3));
+        }
+
         // Allow player to continue
         nextButton.SetActive(true);
     }
 
-    IEnumerator PlayDialogueLine(int index)
+    IEnumerator FadeAndDisable(GameObject picture)
     {
-        nextButton.SetActive(false);
-
-        bool isNarration = (index == 0 || index == 6 || index == 7);
-
-        charName.GetComponent<TMPro.TMP_Text>().text =
-            isNarration ? "You" : "";
-
-        switch (index)
+        if (picture == null)
         {
-            case 0:
-                textToSpeak = "[You feel a surge of energy coursing through you. He facepalms]";
-                break;
-
-            case 1:
-                textToSpeak = "Oh, I almost forgot to introduce myself. My name is Sable, but you can just call me Sable.";
-                break;
-
-            case 2:
-                textToSpeak = "Anyways, we're close to school. Bummer…";
-                break;
-
-            case 3:
-                textToSpeak = "I hope we have classes together, we can sneak notes and stuff!";
-                break;
-
-            case 4:
-                textToSpeak = "Wait no, that's what lovers do.";
-                break;
-
-            case 5:
-                textToSpeak = "You know what, let's hang out after school!";
-                break;
-
-            case 6:
-                textToSpeak = "[You felt determined to make the most out of this situation. You agreed to hanging out with him after school.]";
-                break;
-
-            case 7:
-                textToSpeak = "[What could be the worst that could happen?]";
-                break;
-
-            default:
-                yield break;
+            yield break;
         }
 
-        // Set dialogue text
-        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        CanvasGroup canvasGroup = picture.GetComponent<CanvasGroup>();
 
-        currentTextLength = textToSpeak.Length;
+        // If the picture does not already have a CanvasGroup,
+        // add one automatically.
+        if (canvasGroup == null)
+        {
+            canvasGroup = picture.AddComponent<CanvasGroup>();
+        }
 
-        // Reset text counter
-        TextCreator.charCount = 0;
+        float startAlpha = canvasGroup.alpha;
+        float fadeDuration = 1f;
+        float timer = 0f;
 
-        // Start typewriter effect
-        TextCreator.runTextPrint = true;
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
 
-        yield return new WaitForSeconds(0.05f);
-        yield return new WaitForSeconds(1f);
+            canvasGroup.alpha = Mathf.Lerp(
+                startAlpha,
+                0f,
+                timer / fadeDuration
+            );
 
-        // Wait until all characters have printed
-        yield return new WaitUntil(() => textLength >= currentTextLength);
+            yield return null;
+        }
 
-        yield return new WaitForSeconds(0.5f);
+        canvasGroup.alpha = 0f;
 
-        // Allow player to continue
-        nextButton.SetActive(true);
+        // Disable the picture after the fade finishes
+        picture.SetActive(false);
     }
 
     IEnumerator EventFour()
@@ -248,36 +272,14 @@ public class Scene01Events : MonoBehaviour
         {
             introIndex++;
 
-            // There are 8 intro lines: 0 through 7
-            if (introIndex <= 7)
+            // There are 20 intro lines: 0 through 19
+            if (introIndex <= 19)
             {
                 StartCoroutine(PlayIntroLine(introIndex));
             }
             else
             {
                 // Intro finished
-                eventPos = 1;
-                dialogueIndex = 0;
-
-                StartCoroutine(PlayDialogueLine(dialogueIndex));
-            }
-
-            return;
-        }
-
-        // DIALOGUE SEQUENCE
-        if (eventPos == 1)
-        {
-            dialogueIndex++;
-
-            // There are 8 dialogue lines: 0 through 7
-            if (dialogueIndex <= 7)
-            {
-                StartCoroutine(PlayDialogueLine(dialogueIndex));
-            }
-            else
-            {
-                // Dialogue finished
                 eventPos = 4;
 
                 StartCoroutine(EventFour());

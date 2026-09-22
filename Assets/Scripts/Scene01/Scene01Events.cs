@@ -19,7 +19,7 @@ public class Scene01Events : MonoBehaviour
     public GameObject Picture3;
 
     [Header("Audio")]
-    [SerializeField] AudioSource girlSigh;
+    [SerializeField] AudioSource workAlarm;
 
     [Header("Dialogue")]
     [SerializeField] string textToSpeak;
@@ -80,7 +80,7 @@ public class Scene01Events : MonoBehaviour
                 break;
 
             case 3:
-                textToSpeak = "From up there, you silly!";
+                textToSpeak = "Looks like he fell from the sky, or something…";
                 break;
 
             case 4:
@@ -92,7 +92,7 @@ public class Scene01Events : MonoBehaviour
                 break;
 
             case 6:
-                textToSpeak = "...";
+                textToSpeak = " . . . ";
                 break;
 
             case 7:
@@ -144,7 +144,7 @@ public class Scene01Events : MonoBehaviour
                 break;
 
             case 19:
-                textToSpeak = "...";
+                textToSpeak = " . . . ";
                 break;
 
             default:
@@ -166,9 +166,9 @@ public class Scene01Events : MonoBehaviour
         TextCreator.runTextPrint = true;
 
         // Play sigh on first intro line
-        if (index == 0 && girlSigh != null)
+        if (index == 9 && workAlarm != null)
         {
-            girlSigh.Play();
+            workAlarm.Play();
         }
 
         yield return new WaitForSeconds(0.05f);

@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     {
         buttonClick.Play();
         fadeOut.SetActive(true);
-        StartCoroutine(TransferToClassScene());
+        StartCoroutine(TransferToIntroSeq());
     }
 
     public void LoadGame()
@@ -80,10 +80,10 @@ public class MainMenu : MonoBehaviour
         isAnimating = false;
     }
 
-    IEnumerator TransferToClassScene()
+    IEnumerator TransferToIntroSeq()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(3);
     }
 
     IEnumerator LoadScene()
@@ -95,7 +95,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator TransferToCredits()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 
     IEnumerator StopFade()

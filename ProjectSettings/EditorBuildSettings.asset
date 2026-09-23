@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/UnconStart.unity
     guid: 36cde3745819b764ab6062cd4bedc057
   - enabled: 1
-    path: Assets/Scenes/AfterSchool01.unity
+    path: Assets/Scenes/AfterSchoo01.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Credits.unity

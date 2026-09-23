@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: add9e8bcfad5c9f43b50d1701ed571c7
+guid: 683dac1a23bcf35488941e620101afe0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6016395834576248541
-    second: ds-afterschool_0
+      213: 6937817954938267909
+    second: 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ds-afterschool_0
+      name: 2_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 276
-        width: 1871
-        height: 1377
+        x: 0
+        y: 0
+        width: 2560
+        height: 1440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32161fb5dd7718ca0800000000000000
-      internalID: -6016395834576248541
+      spriteID: 5092c600ca4184060800000000000000
+      internalID: 6937817954938267909
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ds-afterschool_0: -6016395834576248541
+      2_0: 6937817954938267909
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

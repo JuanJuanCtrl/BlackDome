@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c225d4f32478124d87f7a657e3e3d12
+guid: 4256a3ab1ed4a634ca700f3678f54575
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4614048472958919889
-    second: Blue Arika Day Status_0
+      213: -6470460504253458178
+    second: 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue Arika Day Status_0
+      name: 3_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 360
-        width: 1871
-        height: 1293
+        x: 0
+        y: 0
+        width: 2560
+        height: 1440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2b99d03c5b97ffb0800000000000000
-      internalID: -4614048472958919889
+      spriteID: ef817ce047e4436a0800000000000000
+      internalID: -6470460504253458178
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Blue Arika Day Status_0: -4614048472958919889
+      3_0: -6470460504253458178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9794f2af75c2d0840aca1c2fb1bf7a3c
+guid: 287e2fb0589413a49bc93ac090d9d506
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2771173874434444417
-    second: ParkBack_0
+      213: 8457632137845435720
+    second: choicebg_attheclinic_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParkBack_0
+      name: choicebg_attheclinic_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 2560
+        height: 1440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18c028cd4ff257620800000000000000
-      internalID: 2771173874434444417
+      spriteID: 84d64317e9b8f5570800000000000000
+      internalID: 8457632137845435720
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ParkBack_0: 2771173874434444417
+      choicebg_attheclinic_0: 8457632137845435720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

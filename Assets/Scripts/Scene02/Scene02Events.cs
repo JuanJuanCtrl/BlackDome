@@ -95,58 +95,6 @@ public class Scene02Events : MonoBehaviour
                 textToSpeak = "He turned around and scanned the room one last time. Will you do something before exiting the room?";
                 break;
 
-            case 7:
-                textToSpeak = "They’re definitely getting him…";
-                break;
-
-            case 8:
-                textToSpeak = "The loud cacophony of mixed opinions seemed to last forever, until a resonant sound shut everyone up.";
-                break;
-
-            case 9:
-                textToSpeak = "Three long beeps echoed and bounced off the surface of the dome, a signal for something perhaps?";
-                break;
-
-            case 10:
-                textToSpeak = "Anyone who stood around him just a few seconds ago were now walking away, resuming their daily lives as if nothing had ever happened.";
-                break;
-
-            case 11:
-                textToSpeak = "He tried to recall how he’d gotten into this situation, but nothing came.";
-                break;
-
-            case 12:
-                textToSpeak = "Tiny fragments floated around his brain, but nothing he could use to understand where he was, or who he even was.";
-                break;
-
-            case 13:
-                textToSpeak = "Then, he heard two voices. One male, one female:";
-                break;
-
-            case 14:
-                textToSpeak = "He’s alive. Subject A10, name’s Bay Ausman.";
-                break;
-
-            case 15:
-                textToSpeak = "Yeah, he’s the one — definitely.";
-                break;
-
-            case 16:
-                textToSpeak = "Do you think it’s really possible, I mean—";
-                break;
-
-            case 17:
-                textToSpeak = "Yeah, this is the one. He’ll soon learn that, but for now… let’s take him to the place.";
-                break;
-
-            case 18:
-                textToSpeak = "Yeah, let’s go.";
-                break;
-
-            case 19:
-                textToSpeak = " . . . ";
-                break;
-
             default:
                 yield break;
         }
@@ -184,7 +132,7 @@ public class Scene02Events : MonoBehaviour
         // "Who is this?"
         // Fade Picture1 out, then disable it.
         // -------------------------------------------------
-        if (index == 1)
+        if (index == 4)
         {
             yield return StartCoroutine(FadeAndDisable(Picture1));
         }
@@ -194,7 +142,7 @@ public class Scene02Events : MonoBehaviour
         // "Anyone who stood around him..."
         // Fade Picture2 out, then disable it.
         // -------------------------------------------------
-        if (index == 10)
+        if (index == 5)
         {
             yield return StartCoroutine(FadeAndDisable(Picture2));
         }

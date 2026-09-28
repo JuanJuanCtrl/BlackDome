@@ -742,10 +742,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
+    m_HighlightedColor: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
     m_PressedColor: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
     m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -763,7 +763,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 600535518}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1704146425}
+        m_TargetAssemblyTypeName: Scene02Events, Assembly-CSharp
+        m_MethodName: ChoiceButton2Pressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &600535518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1642,10 +1654,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
+    m_HighlightedColor: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
     m_PressedColor: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
     m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1663,7 +1675,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1149446108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1704146425}
+        m_TargetAssemblyTypeName: Scene02Events, Assembly-CSharp
+        m_MethodName: ChoiceButton1Pressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1149446108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,9 +2178,12 @@ MonoBehaviour:
   nextButton: {fileID: 1864202513}
   charName: {fileID: 588585693}
   fadeOut: {fileID: 594865926}
+  ChoiceButton1: {fileID: 1149446105}
+  ChoiceButton2: {fileID: 600535515}
   Picture1: {fileID: 1065547644}
   Picture2: {fileID: 488614236}
   Picture3: {fileID: 306004719}
+  Picture4: {fileID: 228801228}
   workAlarm: {fileID: 0}
   textToSpeak: 
   currentTextLength: 0

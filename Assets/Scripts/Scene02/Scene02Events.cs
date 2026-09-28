@@ -13,10 +13,15 @@ public class Scene02Events : MonoBehaviour
     public GameObject charName;
     public GameObject fadeOut;
 
+    [Header("Choice Buttons")]
+    public GameObject ChoiceButton1;
+    public GameObject ChoiceButton2;
+
     [Header("Pictures")]
     public GameObject Picture1;
     public GameObject Picture2;
     public GameObject Picture3;
+    public GameObject Picture4;
 
     [Header("Audio")]
     [SerializeField] AudioSource workAlarm;
@@ -32,15 +37,28 @@ public class Scene02Events : MonoBehaviour
     // Index within the intro dialogue sequence
     int introIndex = 0;
 
+    // Prevents the player from pressing buttons while dialogue is running
+    bool choiceDialoguePlaying = false;
+
+
     void Update()
     {
         textLength = TextCreator.charCount;
     }
 
+
     void Start()
     {
+        // Hide choice buttons at the beginning
+        if (ChoiceButton1 != null)
+            ChoiceButton1.SetActive(false);
+
+        if (ChoiceButton2 != null)
+            ChoiceButton2.SetActive(false);
+
         StartCoroutine(EventStarter());
     }
+
 
     IEnumerator EventStarter()
     {
@@ -61,9 +79,17 @@ public class Scene02Events : MonoBehaviour
         yield return StartCoroutine(PlayIntroLine(introIndex));
     }
 
+
     IEnumerator PlayIntroLine(int index)
     {
         nextButton.SetActive(false);
+
+        // Make sure choices are hidden while normal dialogue is playing
+        if (ChoiceButton1 != null)
+            ChoiceButton1.SetActive(false);
+
+        if (ChoiceButton2 != null)
+            ChoiceButton2.SetActive(false);
 
         switch (index)
         {
@@ -113,7 +139,7 @@ public class Scene02Events : MonoBehaviour
         // Start typewriter effect
         TextCreator.runTextPrint = true;
 
-        // Play sigh on first intro line
+        // Play alarm if needed
         if (index == 9 && workAlarm != null)
         {
             workAlarm.Play();
@@ -127,39 +153,324 @@ public class Scene02Events : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+
         // -------------------------------------------------
         // PICTURE 1
-        // "Who is this?"
-        // Fade Picture1 out, then disable it.
         // -------------------------------------------------
         if (index == 4)
         {
             yield return StartCoroutine(FadeAndDisable(Picture1));
         }
 
+
         // -------------------------------------------------
         // PICTURE 2
-        // "Anyone who stood around him..."
-        // Fade Picture2 out, then disable it.
         // -------------------------------------------------
         if (index == 5)
         {
             yield return StartCoroutine(FadeAndDisable(Picture2));
         }
 
+
         // -------------------------------------------------
-        // PICTURE 3
-        // "He's alive. Subject A10..."
-        // Fade Picture3 out, then disable it.
+        // CHOICE POINT
         // -------------------------------------------------
-        if (index == 14)
+        if (index == 6)
+        {
+            // Hide the normal next button
+            nextButton.SetActive(false);
+
+            // Show both choices
+            if (ChoiceButton1 != null)
+                ChoiceButton1.SetActive(true);
+
+            if (ChoiceButton2 != null)
+                ChoiceButton2.SetActive(true);
+
+            yield break;
+        }
+
+
+        // Allow player to continue normally
+        nextButton.SetActive(true);
+    }
+
+
+    // =====================================================
+    // CHOICE 1
+    // =====================================================
+
+    public void ChoiceButton1Pressed()
+    {
+        if (choiceDialoguePlaying)
+            return;
+
+        StartCoroutine(PlayChoice1());
+    }
+
+
+    IEnumerator PlayChoice1()
+    {
+        choiceDialoguePlaying = true;
+
+        // Hide both choice buttons
+        if (ChoiceButton1 != null)
+            ChoiceButton1.SetActive(false);
+
+        if (ChoiceButton2 != null)
+            ChoiceButton2.SetActive(false);
+
+        // Hide normal next button
+        nextButton.SetActive(false);
+
+        // -------------------------------------------------
+        // CHOICE 1:
+        // Fade Picture 4 OUT before the dialogue begins
+        // -------------------------------------------------
+
+        if (Picture4 != null)
+        {
+            yield return StartCoroutine(FadeOutPicture(Picture4));
+        }
+
+
+        // -------------------------------------------------
+        // CHOICE 1 DIALOGUE
+        // -------------------------------------------------
+
+        string[] choice1Dialogue =
+        {
+            "Bay decided to turn around and see if there was anything that could help him put an answer to his doubts.",
+            "As he searched, he only found unimportant documents that didn’t help him much.",
+            "After a few minutes, Bay found nothing so he decided to leave the room."
+        };
+
+
+        // Play each line one at a time
+        for (int i = 0; i < choice1Dialogue.Length; i++)
+        {
+            yield return StartCoroutine(PlayChoiceLine(choice1Dialogue[i]));
+        }
+
+
+        // -------------------------------------------------
+        // CHOICE 1 FINISHED
+        // Fade Picture 3 OUT
+        // -------------------------------------------------
+
+        if (Picture3 != null)
         {
             yield return StartCoroutine(FadeAndDisable(Picture3));
         }
 
-        // Allow player to continue
-        nextButton.SetActive(true);
+
+        // -------------------------------------------------
+        // CHOICE 1 FINISHED
+        // Fade Picture 4 BACK IN
+        // -------------------------------------------------
+
+        if (Picture4 != null)
+        {
+            yield return StartCoroutine(FadeInPicture(Picture4));
+        }
+
+
+        choiceDialoguePlaying = false;
+
+        // Continue to next event
+        eventPos = 4;
+
+        StartCoroutine(EventFour());
     }
+
+
+    // =====================================================
+    // CHOICE 2
+    // =====================================================
+
+    public void ChoiceButton2Pressed()
+    {
+        if (choiceDialoguePlaying)
+            return;
+
+        StartCoroutine(PlayChoice2());
+    }
+
+
+    IEnumerator PlayChoice2()
+    {
+        choiceDialoguePlaying = true;
+
+        // Hide both choice buttons
+        if (ChoiceButton1 != null)
+            ChoiceButton1.SetActive(false);
+
+        if (ChoiceButton2 != null)
+            ChoiceButton2.SetActive(false);
+
+        // Hide normal next button
+        nextButton.SetActive(false);
+
+
+        // -------------------------------------------------
+        // CHOICE 2 DIALOGUE
+        // -------------------------------------------------
+
+        string[] choice2Dialogue =
+        {
+            "Bay decided to turn back around and leave the room.",
+            "Nothing relevant lay inside.",
+            "Bay slowly made his way to the door and walked out."
+        };
+
+
+        // Play each line one at a time
+        for (int i = 0; i < choice2Dialogue.Length; i++)
+        {
+            yield return StartCoroutine(PlayChoiceLine(choice2Dialogue[i]));
+        }
+
+
+        // -------------------------------------------------
+        // CHOICE 2 FINISHED
+        // Fade Picture 3 OUT
+        // -------------------------------------------------
+
+        if (Picture3 != null)
+        {
+            yield return StartCoroutine(FadeAndDisable(Picture3));
+        }
+
+
+        choiceDialoguePlaying = false;
+
+        // Continue to next event
+        eventPos = 4;
+
+        StartCoroutine(EventFour());
+    }
+
+
+    // =====================================================
+    // PLAYS ONE CHOICE DIALOGUE LINE
+    // =====================================================
+
+    IEnumerator PlayChoiceLine(string dialogueLine)
+    {
+        // Clear character name
+        charName.GetComponent<TMPro.TMP_Text>().text = "";
+
+        // Set dialogue
+        textToSpeak = dialogueLine;
+
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+
+        currentTextLength = textToSpeak.Length;
+
+        // Reset typewriter counter
+        TextCreator.charCount = 0;
+
+        // Start typewriter
+        TextCreator.runTextPrint = true;
+
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1f);
+
+        // Wait until the entire line has finished typing
+        yield return new WaitUntil(() => textLength >= currentTextLength);
+
+        // Small pause before the next line
+        yield return new WaitForSeconds(0.5f);
+    }
+
+
+    // =====================================================
+    // FADE PICTURE OUT
+    // =====================================================
+
+    IEnumerator FadeOutPicture(GameObject picture)
+    {
+        if (picture == null)
+        {
+            yield break;
+        }
+
+        CanvasGroup canvasGroup = picture.GetComponent<CanvasGroup>();
+
+        // Add CanvasGroup if needed
+        if (canvasGroup == null)
+        {
+            canvasGroup = picture.AddComponent<CanvasGroup>();
+        }
+
+        float startAlpha = canvasGroup.alpha;
+        float fadeDuration = 1f;
+        float timer = 0f;
+
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+
+            canvasGroup.alpha = Mathf.Lerp(
+                startAlpha,
+                0f,
+                timer / fadeDuration
+            );
+
+            yield return null;
+        }
+
+        canvasGroup.alpha = 0f;
+    }
+
+
+    // =====================================================
+    // FADE PICTURE IN
+    // =====================================================
+
+    IEnumerator FadeInPicture(GameObject picture)
+    {
+        if (picture == null)
+        {
+            yield break;
+        }
+
+        // Make sure picture is active
+        picture.SetActive(true);
+
+        CanvasGroup canvasGroup = picture.GetComponent<CanvasGroup>();
+
+        // Add CanvasGroup if needed
+        if (canvasGroup == null)
+        {
+            canvasGroup = picture.AddComponent<CanvasGroup>();
+        }
+
+        canvasGroup.alpha = 0f;
+
+        float fadeDuration = 1f;
+        float timer = 0f;
+
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+
+            canvasGroup.alpha = Mathf.Lerp(
+                0f,
+                1f,
+                timer / fadeDuration
+            );
+
+            yield return null;
+        }
+
+        canvasGroup.alpha = 1f;
+    }
+
+
+    // =====================================================
+    // FADE AND DISABLE PICTURE
+    // =====================================================
 
     IEnumerator FadeAndDisable(GameObject picture)
     {
@@ -200,6 +511,11 @@ public class Scene02Events : MonoBehaviour
         picture.SetActive(false);
     }
 
+
+    // =====================================================
+    // EVENT FOUR
+    // =====================================================
+
     IEnumerator EventFour()
     {
         nextButton.SetActive(false);
@@ -213,21 +529,36 @@ public class Scene02Events : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+
+    // =====================================================
+    // NORMAL NEXT BUTTON
+    // =====================================================
+
     public void NextButton()
     {
+        // Don't allow NextButton to interfere with choice dialogue
+        if (choiceDialoguePlaying)
+            return;
+
+
+        // -------------------------------------------------
         // INTRO SEQUENCE
+        // -------------------------------------------------
+
         if (eventPos == 0)
         {
             introIndex++;
 
-            // There are 20 intro lines: 0 through 19
-            if (introIndex <= 19)
+            // The choice happens at introIndex 6,
+            // so PlayIntroLine(6) will display the buttons.
+            if (introIndex <= 6)
             {
                 StartCoroutine(PlayIntroLine(introIndex));
             }
             else
             {
-                // Intro finished
+                // This should normally not be reached because
+                // the choice buttons take over at line 6.
                 eventPos = 4;
 
                 StartCoroutine(EventFour());
@@ -236,7 +567,11 @@ public class Scene02Events : MonoBehaviour
             return;
         }
 
+
+        // -------------------------------------------------
         // END EVENT
+        // -------------------------------------------------
+
         if (eventPos == 4)
         {
             StartCoroutine(EventFour());

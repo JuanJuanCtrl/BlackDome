@@ -139,7 +139,7 @@ public class Scene02Events : MonoBehaviour
         // Start typewriter effect
         TextCreator.runTextPrint = true;
 
-        // Play alarm if needed
+        // Play alarm if needed, otherwise it won't do anything
         if (index == 9 && workAlarm != null)
         {
             workAlarm.Play();

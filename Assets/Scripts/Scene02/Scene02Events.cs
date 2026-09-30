@@ -40,6 +40,9 @@ public class Scene02Events : MonoBehaviour
     // Prevents the player from pressing buttons while dialogue is running
     bool choiceDialoguePlaying = false;
 
+    // Used to make choice dialogue wait for the player to click Next
+    bool waitingForChoiceNext = false;
+
 
     void Update()
     {
@@ -125,6 +128,7 @@ public class Scene02Events : MonoBehaviour
                 yield break;
         }
 
+
         // Clear character name during intro
         charName.GetComponent<TMPro.TMP_Text>().text = "";
 
@@ -139,7 +143,7 @@ public class Scene02Events : MonoBehaviour
         // Start typewriter effect
         TextCreator.runTextPrint = true;
 
-        // Play alarm if needed, otherwise it won't do anything
+        // Play alarm if needed
         if (index == 9 && workAlarm != null)
         {
             workAlarm.Play();
@@ -157,6 +161,7 @@ public class Scene02Events : MonoBehaviour
         // -------------------------------------------------
         // PICTURE 1
         // -------------------------------------------------
+
         if (index == 4)
         {
             yield return StartCoroutine(FadeAndDisable(Picture1));
@@ -166,6 +171,7 @@ public class Scene02Events : MonoBehaviour
         // -------------------------------------------------
         // PICTURE 2
         // -------------------------------------------------
+
         if (index == 5)
         {
             yield return StartCoroutine(FadeAndDisable(Picture2));
@@ -175,6 +181,7 @@ public class Scene02Events : MonoBehaviour
         // -------------------------------------------------
         // CHOICE POINT
         // -------------------------------------------------
+
         if (index == 6)
         {
             // Hide the normal next button
@@ -223,6 +230,7 @@ public class Scene02Events : MonoBehaviour
         // Hide normal next button
         nextButton.SetActive(false);
 
+
         // -------------------------------------------------
         // CHOICE 1:
         // Fade Picture 4 OUT before the dialogue begins
@@ -246,7 +254,9 @@ public class Scene02Events : MonoBehaviour
         };
 
 
-        // Play each line one at a time
+        // Play each line one at a time.
+        // PlayChoiceLine will now WAIT for the player
+        // to click Next before returning.
         for (int i = 0; i < choice1Dialogue.Length; i++)
         {
             yield return StartCoroutine(PlayChoiceLine(choice1Dialogue[i]));
@@ -324,7 +334,8 @@ public class Scene02Events : MonoBehaviour
         };
 
 
-        // Play each line one at a time
+        // Play each line one at a time.
+        // Each line waits for the player to click Next.
         for (int i = 0; i < choice2Dialogue.Length; i++)
         {
             yield return StartCoroutine(PlayChoiceLine(choice2Dialogue[i]));
@@ -357,8 +368,16 @@ public class Scene02Events : MonoBehaviour
 
     IEnumerator PlayChoiceLine(string dialogueLine)
     {
+        // Hide Next while the new line is typing
+        nextButton.SetActive(false);
+
+        // Make sure the waiting state is reset
+        waitingForChoiceNext = false;
+
+
         // Clear character name
         charName.GetComponent<TMPro.TMP_Text>().text = "";
+
 
         // Set dialogue
         textToSpeak = dialogueLine;
@@ -367,20 +386,41 @@ public class Scene02Events : MonoBehaviour
 
         currentTextLength = textToSpeak.Length;
 
+
         // Reset typewriter counter
         TextCreator.charCount = 0;
+
 
         // Start typewriter
         TextCreator.runTextPrint = true;
 
+
         yield return new WaitForSeconds(0.05f);
         yield return new WaitForSeconds(1f);
+
 
         // Wait until the entire line has finished typing
         yield return new WaitUntil(() => textLength >= currentTextLength);
 
-        // Small pause before the next line
-        yield return new WaitForSeconds(0.5f);
+
+        // The line is completely typed.
+        // Show Next so the player can manually continue.
+        nextButton.SetActive(true);
+
+
+        // Tell NextButton() that we are waiting for a click.
+        waitingForChoiceNext = true;
+
+
+        // IMPORTANT:
+        // Do NOT continue automatically.
+        // Wait here until the player presses Next.
+        yield return new WaitUntil(() => waitingForChoiceNext == false);
+
+
+        // The player clicked Next.
+        // The coroutine can now return, allowing the
+        // for-loop to start the next dialogue line.
     }
 
 
@@ -395,7 +435,9 @@ public class Scene02Events : MonoBehaviour
             yield break;
         }
 
+
         CanvasGroup canvasGroup = picture.GetComponent<CanvasGroup>();
+
 
         // Add CanvasGroup if needed
         if (canvasGroup == null)
@@ -403,9 +445,11 @@ public class Scene02Events : MonoBehaviour
             canvasGroup = picture.AddComponent<CanvasGroup>();
         }
 
+
         float startAlpha = canvasGroup.alpha;
         float fadeDuration = 1f;
         float timer = 0f;
+
 
         while (timer < fadeDuration)
         {
@@ -419,6 +463,7 @@ public class Scene02Events : MonoBehaviour
 
             yield return null;
         }
+
 
         canvasGroup.alpha = 0f;
     }
@@ -435,10 +480,13 @@ public class Scene02Events : MonoBehaviour
             yield break;
         }
 
+
         // Make sure picture is active
         picture.SetActive(true);
 
+
         CanvasGroup canvasGroup = picture.GetComponent<CanvasGroup>();
+
 
         // Add CanvasGroup if needed
         if (canvasGroup == null)
@@ -446,10 +494,13 @@ public class Scene02Events : MonoBehaviour
             canvasGroup = picture.AddComponent<CanvasGroup>();
         }
 
+
         canvasGroup.alpha = 0f;
+
 
         float fadeDuration = 1f;
         float timer = 0f;
+
 
         while (timer < fadeDuration)
         {
@@ -463,6 +514,7 @@ public class Scene02Events : MonoBehaviour
 
             yield return null;
         }
+
 
         canvasGroup.alpha = 1f;
     }
@@ -479,7 +531,9 @@ public class Scene02Events : MonoBehaviour
             yield break;
         }
 
+
         CanvasGroup canvasGroup = picture.GetComponent<CanvasGroup>();
+
 
         // If the picture does not already have a CanvasGroup,
         // add one automatically.
@@ -488,9 +542,11 @@ public class Scene02Events : MonoBehaviour
             canvasGroup = picture.AddComponent<CanvasGroup>();
         }
 
+
         float startAlpha = canvasGroup.alpha;
         float fadeDuration = 1f;
         float timer = 0f;
+
 
         while (timer < fadeDuration)
         {
@@ -505,7 +561,9 @@ public class Scene02Events : MonoBehaviour
             yield return null;
         }
 
+
         canvasGroup.alpha = 0f;
+
 
         // Disable the picture after the fade finishes
         picture.SetActive(false);
@@ -536,9 +594,26 @@ public class Scene02Events : MonoBehaviour
 
     public void NextButton()
     {
-        // Don't allow NextButton to interfere with choice dialogue
+        // -------------------------------------------------
+        // CHOICE DIALOGUE
+        // -------------------------------------------------
+
+        // If a choice dialogue is currently playing,
+        // Next should ONLY be used to advance the current
+        // choice line.
         if (choiceDialoguePlaying)
+        {
+            if (waitingForChoiceNext)
+            {
+                // Hide the button immediately after clicking it
+                nextButton.SetActive(false);
+
+                // Allow PlayChoiceLine() to continue
+                waitingForChoiceNext = false;
+            }
+
             return;
+        }
 
 
         // -------------------------------------------------

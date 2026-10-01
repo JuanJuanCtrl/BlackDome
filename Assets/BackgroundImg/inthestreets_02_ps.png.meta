@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f8d982b474150e94a87efc41f794e895
+guid: 3275bece3b610b446827faf39e0fb21f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8635426073566218761
-    second: inthestreets_02_ps_0
+      213: 7157561037332017152
+    second: 19_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inthestreets_02_ps_0
+      name: 19_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f570f01dbdc82880800000000000000
-      internalID: -8635426073566218761
+      spriteID: 000f95057d3c45360800000000000000
+      internalID: 7157561037332017152
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      inthestreets_02_ps_0: -8635426073566218761
+      19_0: 7157561037332017152
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

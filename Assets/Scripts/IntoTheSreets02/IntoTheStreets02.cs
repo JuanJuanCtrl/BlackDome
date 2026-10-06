@@ -25,24 +25,8 @@ public class IntoTheStreets02 : MonoBehaviour
     [SerializeField] GameObject charName;
     [SerializeField] GameObject fadeOut;
 
-    // --- Dialogue segment arrays and indices ---
-    private string[] transitionLines =
-    {
-        "Anyways bro, you said we should wait till midnight for him to appear? I guess that makes sense, since his name is Midnight and all, but still...",
-        "[He softly groans]",
-        "It's 8:00 PM right now, so we have a few hours to kill.",
-        "We don't really have anywhere to go, and I doubt they'd let some high schoolers roam the streets at night.",
-        "They even caught me once trying to sneak into the arcade, that was like a year ago...",
-        "I don't even know why I'm telling you this, but you don't seem to judge. I guess that's why we're friends...",
-        "[You and Koda kept talking for a while, eventually going inside to wait for midnight to come. What could Midnight say tonight...]"
-    };
-    private int transitionLineIndex = 0;
-
     int introIndex = 0;
     bool isTyping = false; // Prevents spamming Next
-
-    // State flag for end-of-scene transition
-    private bool awaitingFinalContinue = false;
 
     void Update()
     {
@@ -74,6 +58,7 @@ public class IntoTheStreets02 : MonoBehaviour
             case "neutral":     charNeutral.SetActive(true); break;
             case "surprised":   charSurprised.SetActive(true); break;
             case "happy":       charHappy.SetActive(true); break;
+            case "smile":       charHappy.SetActive(true); break;
             case "embarrassed": charEmbarrassed.SetActive(true); break;
             case "confused":    charConfused.SetActive(true); break;
             case "sad":         charSad.SetActive(true); break;
@@ -89,7 +74,7 @@ public class IntoTheStreets02 : MonoBehaviour
         yield return new WaitForSeconds(2f);
         mainTextObject.SetActive(true);
         textBox.SetActive(true);
-        charName.GetComponent<TMP_Text>().text = "Koda";
+        charName.GetComponent<TMP_Text>().text = "Unknown Girl";
 
         introIndex = 0;
         yield return StartCoroutine(PlayIntroLine(introIndex));
@@ -103,40 +88,125 @@ public class IntoTheStreets02 : MonoBehaviour
         switch (index)
         {
             case 0:
-                ShowExpression("happy");
-                textToSpeak = "Okay, we're here. I'm intrigued to see this cat you called Midnight.";
+                ShowExpression("smile");
+                textToSpeak = "A young girl, with long light blonde hair and blue, crystalline eyes.";
                 break;
             case 1:
-                ShowExpression("embarrassed");
-                textToSpeak = "Is it like a cute little kitten, or a big scary cat? Either way I wanna see it!";
+                ShowExpression("smile");
+                textToSpeak = "She wears a black full-body suit, loose enough to let her body breath. ";
                 break;
             case 2:
-                ShowExpression("neutral");
-                textToSpeak = "I hope it answers my question about what that weird blue fog is...";
+                ShowExpression("smile");
+                textToSpeak = "The girl looked up at Bay, who was still looking at her.";
                 break;
             case 3:
-                ShowExpression("neutral");
-                textToSpeak = "[You felt as if your minds were interconnected with the same thoughts and questions.]";
+                ShowExpression("smile");
+                textToSpeak = "The girl opened her mouth to speak:";
                 break;
             case 4:
-                ShowExpression("neutral");
-                textToSpeak = "[What would Midnight say tonight, and what could he be hiding from you?]";
+                ShowExpression("happy");
+                textToSpeak = "Hey there, nice Transpod I got, right?";
                 break;
             case 5:
-                ShowExpression("neutral");
-                textToSpeak = "[You thought about this for awhile, Koda turned to you, waiting for your input.]";
+                ShowExpression("happy");
+                textToSpeak = "[The girl chuckled, then returned her gaze to Bay.]";
                 break;
+            case 6:
+                ShowExpression("confused");
+                textToSpeak = "Wait, aren't you that boy who was unconcious in the plaza?";
+                break;
+            case 7:
+                ShowExpression("happy");
+                textToSpeak = "I guess you must not remember, but you had a pretty rough fall!";
+                break;
+            case 8:
+                ShowExpression("smile");
+                textToSpeak = "You're probably crazy strong for sticking the landing though, I can barely go around without getting a scratch.";
+                break;
+            case 9:
+                ShowExpression("smile");
+                textToSpeak = "[Bay looked puzzled, confused. He looked at the vehicle behind her. Transpod? He tried to recall if he had ever heard that word.]";
+                break;
+            case 10:
+                ShowExpression("smile");
+                textToSpeak = "[But nothing came to him.]";
+                break;
+            case 11:
+                ShowExpression("smile");
+                textToSpeak = "You're pretty quiet. Man of few words. huh?";
+                break;
+            case 12:
+                ShowExpression("smile");
+                textToSpeak = "Well, it's not like I just invaded your personal space.";
+                break;
+            case 13:
+                ShowExpression("smile");
+                textToSpeak = "[The girl sarcastically, letting out a short giggle.]";
+                break;
+            case 14:
+                ShowExpression("smile");
+                textToSpeak = "You don't look like you're from around these streets.";
+                break;
+            case 15:
+                ShowExpression("smile");
+                textToSpeak = "You probably came from The Surface, right?";
+                break;
+            case 16:
+                ShowExpression("smile");
+                textToSpeak = "[As Bay started to look even more puzzled, the girl finally came to her senses.]";
+                break;
+            case 17:
+                ShowExpression("embarrassed");
+                textToSpeak = "Oh, sorry. I haven't even introduced myself!";
+                break;
+            case 18:
+                ShowExpression("happy");
+                textToSpeak = "My name is Agnes Blackwood, nice to meet you!";
+                break;
+            case 19:
+                ShowExpression("happy");
+                textToSpeak = "What's your name?";
+                break;
+            case 20:
+                ShowExpression("happy");
+                textToSpeak = "[His name. That was one of the things he could actually recall, so he let it out:]";
+                break;
+            case 21:
+                ShowExpression("happy");
+                textToSpeak = "Bay. Bay Ausman.";
+                break;
+            case 22:
+                ShowExpression("smile");
+                textToSpeak = "[Agnes looked at Bay, smiling.]";
+                break;
+            case 23:
+                ShowExpression("smile");
+                textToSpeak = "Bay , huh? Fancy name. I like it.";
+                break;
+            case 24:
+                ShowExpression("smile");
+                textToSpeak = "[There were a few seconds of awkward silence before Agnes spoke again.]";
+                break;
+            case 25:
+                ShowExpression("smile");
+                textToSpeak = "Hey, you wanna check out my Transpod? I decorated it with a bunch of stuff I have.";
+                break;
+            case 26:
+                ShowExpression("happy");
+                textToSpeak = "Come on, I'll even give you a free ride!";
+                break;
+            case 27:
+                ShowExpression("happy");
+                textToSpeak = "[She didn't finish her sentence when she began to walk towards the Transpod's entrance.]";
+                break;
+            case 28:
+                ShowExpression("happy");
+                textToSpeak = "[Bay had no choice but to follow her, and he did.]";
+                break;
+
         }
 
-        // Set charName depending on the line (introspective lines use "You")
-        if (index == 3 || index == 4 || index == 5)
-        {
-            charName.GetComponent<TMP_Text>().text = "You";
-        }
-        else
-        {
-            charName.GetComponent<TMP_Text>().text = "Koda";
-        }
+        charName.GetComponent<TMP_Text>().text = index < 4 ? "" : (index == 18 ? "Agnes" : "Unknown Girl");
         textBox.GetComponent<TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -149,82 +219,19 @@ public class IntoTheStreets02 : MonoBehaviour
         isTyping = false;
     }
 
-    IEnumerator DisplayTransitionLine(int lineIndex)
-    {
-        nextButton.SetActive(false);
-        isTyping = true;
-
-        ShowExpression("neutral");
-        if (lineIndex >= 0 && lineIndex < transitionLines.Length)
-        {
-            textToSpeak = transitionLines[lineIndex];
-            charName.GetComponent<TMP_Text>().text = "Koda";
-
-            textBox.SetActive(true);
-            mainTextObject.SetActive(true);
-            textBox.GetComponent<TMP_Text>().text = textToSpeak;
-            currentTextLength = textToSpeak.Length;
-            TextCreator.runTextPrint = true;
-
-            yield return new WaitForSeconds(0.05f);
-            yield return new WaitForSeconds(1f);
-            yield return new WaitUntil(() => textLength >= currentTextLength);
-            yield return new WaitForSeconds(0.5f);
-
-            bool isFinalTransitionLine = lineIndex == transitionLines.Length - 1;
-            if (isFinalTransitionLine)
-            {
-                // Instead of starting EventFour here, prompt with the next button
-                awaitingFinalContinue = true;   // set flag to wait for final Next press
-                nextButton.SetActive(true);     // allow user to continue
-                isTyping = false;
-                yield break;
-            }
-
-            nextButton.SetActive(true);
-        }
-        isTyping = false;
-    }
-
     // NextButton to be called by Unity UI OnClick
     public void NextButton()
     {
         if (isTyping) return; // Don't skip the typing animation
 
-        // Awaiting user input after the last line before ending scene
-        if (awaitingFinalContinue)
+        introIndex++;
+        if (introIndex <= 28)
         {
-            awaitingFinalContinue = false;
-            nextButton.SetActive(false);
+            StartCoroutine(PlayIntroLine(introIndex));
+        }
+        else
+        {
             StartCoroutine(EventFour());
-            return;
-        }
-
-        if (eventPos == 0)
-        {
-            introIndex++;
-            if (introIndex <= 5)
-            {
-                StartCoroutine(PlayIntroLine(introIndex));
-            }
-            else
-            {
-                eventPos = 2;
-                transitionLineIndex = 0;
-                StartCoroutine(DisplayTransitionLine(transitionLineIndex));
-            }
-            return;
-        }
-
-        if (eventPos == 2)
-        {
-            transitionLineIndex++;
-            if (transitionLineIndex < transitionLines.Length)
-            {
-                StartCoroutine(DisplayTransitionLine(transitionLineIndex));
-            }
-            // else will hang here, until awaitingFinalContinue above is hit
-            return;
         }
     }
 

@@ -1608,7 +1608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1065850823}
-  - component: {fileID: 1065850825}
+  - component: {fileID: 1065850826}
   m_Layer: 0
   m_Name: SceneControl
   m_TagString: Untagged
@@ -1631,7 +1631,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1065850825
+--- !u!114 &1065850826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1640,9 +1640,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1065850821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c2676d79ecfc1943963fcbc1567b4a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2109c27d63971a447a514ed611850cbb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IntoTheStreets02
+  m_EditorClassIdentifier: Assembly-CSharp::InsideTheTranspod01
   charNeutral: {fileID: 1413493139}
   charSurprised: {fileID: 640619712}
   charHappy: {fileID: 2126314756}
@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1065850825}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: IntoTheStreets02, Assembly-CSharp
         m_MethodName: NextButton
         m_Mode: 1

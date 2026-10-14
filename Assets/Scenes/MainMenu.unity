@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -457.99997, y: -225.12918}
+  m_AnchoredPosition: {x: -446.00006, y: -225.12918}
   m_SizeDelta: {x: 873.8141, y: 54.657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22567277
@@ -658,8 +658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 565, y: -327}
-  m_SizeDelta: {x: 642.0635, y: 581.64}
+  m_AnchoredPosition: {x: 592, y: -341}
+  m_SizeDelta: {x: 703.7351, y: 581.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &274784693
 Animator:
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 58acdf3e1e787bf40960630c9bb11044, type: 3}
+  m_Texture: {fileID: 2800000, guid: b65bb3a080fa0804f9f288902b39f7a4, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1331,7 +1331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -457.9999, y: -153}
+  m_AnchoredPosition: {x: -446, y: -153}
   m_SizeDelta: {x: 873.8141, y: 54.657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379721153
@@ -1888,7 +1888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -458, y: -295.3801}
+  m_AnchoredPosition: {x: -446.0001, y: -295.3801}
   m_SizeDelta: {x: 873.8141, y: 54.657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025477038
@@ -2323,7 +2323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -457.99997, y: -411.7862}
+  m_AnchoredPosition: {x: -446.00006, y: -411.7862}
   m_SizeDelta: {x: 873.8141, y: 54.657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106259993

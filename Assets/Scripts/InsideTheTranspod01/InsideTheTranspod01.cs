@@ -104,104 +104,80 @@ public class InsideTheTranspod01 : MonoBehaviour
                 textToSpeak = "The girl opened her mouth to speak:";
                 break;
             case 4:
-                ShowExpression("happy");
-                textToSpeak = "Hey there, nice Transpod I got, right?";
+                ShowExpression("smile");
+                textToSpeak = "Pretty cool, huh?";
                 break;
             case 5:
-                ShowExpression("happy");
-                textToSpeak = "[The girl chuckled, then returned her gaze to Bay.]";
+                ShowExpression("smile");
+                textToSpeak = "Transpoew have this mechanism where it's able to detect its owner, and it opens and closes automatically when it does.";
                 break;
             case 6:
-                ShowExpression("confused");
-                textToSpeak = "Wait, aren't you that boy who was unconcious in the plaza?";
+                ShowExpression("smile");
+                textToSpeak = "Transpods are blank when manufactured by default, and they are assigned to you once you're old enough.";
                 break;
             case 7:
-                ShowExpression("happy");
-                textToSpeak = "I guess you must not remember, but you had a pretty rough fall!";
+                ShowExpression("smile");
+                textToSpeak = "[Agnes continued to talk about her Transpod passionately, but once it was over—her expressiion changed.]";
                 break;
             case 8:
                 ShowExpression("smile");
-                textToSpeak = "You're probably crazy strong for sticking the landing though, I can barely go around without getting a scratch.";
+                textToSpeak = "[She fiddled with a few buttons and the Transpod was off the ground and floating.]";
                 break;
             case 9:
                 ShowExpression("smile");
-                textToSpeak = "[Bay looked puzzled, confused. He looked at the vehicle behind her. Transpod? He tried to recall if he had ever heard that word.]";
+                textToSpeak = "[Bay felt that despite the fast launch, he didn't get flung around.]";
                 break;
             case 10:
                 ShowExpression("smile");
-                textToSpeak = "[But nothing came to him.]";
+                textToSpeak = "[But Agnes' expression expression was more... purposeful now.]";
                 break;
             case 11:
                 ShowExpression("smile");
-                textToSpeak = "You're pretty quiet. Man of few words. huh?";
+                textToSpeak = "[Whatever came out of her mouth next, was something he needed to hear.]";
                 break;
             case 12:
                 ShowExpression("smile");
-                textToSpeak = "Well, it's not like I just invaded your personal space.";
+                textToSpeak = "So, now that we're alone—nobody can listen to us.";
                 break;
             case 13:
                 ShowExpression("smile");
-                textToSpeak = "[The girl sarcastically, letting out a short giggle.]";
+                textToSpeak = "[She looked out the window, both ways before coming to face him again. Her expression was serious now.]";
                 break;
             case 14:
                 ShowExpression("smile");
-                textToSpeak = "You don't look like you're from around these streets.";
+                textToSpeak = "I know who you are, Bay.";
                 break;
             case 15:
                 ShowExpression("smile");
-                textToSpeak = "You probably came from The Surface, right?";
+                textToSpeak = "You are from The Surface, you are what they call a Dustbreather.";
                 break;
             case 16:
                 ShowExpression("smile");
-                textToSpeak = "[As Bay started to look even more puzzled, the girl finally came to her senses.]";
+                textToSpeak = "They don't like people like you around here, you better be safe.";
                 break;
             case 17:
-                ShowExpression("embarrassed");
-                textToSpeak = "Oh, sorry. I haven't even introduced myself!";
+                ShowExpression("smile");
+                textToSpeak = "Right now, they are probably looking for you. I can help you disguise yourself, give you a place to live.";
                 break;
             case 18:
-                ShowExpression("happy");
-                textToSpeak = "My name is Agnes Blackwood, nice to meet you!";
+                ShowExpression("smile");
+                textToSpeak = "But, it may be difficult—there are those who already know what you look like.";
                 break;
             case 19:
-                ShowExpression("happy");
-                textToSpeak = "What's your name?";
+                ShowExpression("smile");
+                textToSpeak = "They are the ones who we should look out for, in case they snitch...";
                 break;
             case 20:
-                ShowExpression("happy");
-                textToSpeak = "[His name. That was one of the things he could actually recall, so he let it out:]";
+                ShowExpression("smile");
+                textToSpeak = "[As she spat new information at him, he looked out the window out of curiosity.]";
                 break;
             case 21:
-                ShowExpression("happy");
-                textToSpeak = "Bay. Bay Ausman.";
+                ShowExpression("smile");
+                textToSpeak = "He noticed Transpods like the one they were riding, but they were black and floated close to each others.";
                 break;
             case 22:
                 ShowExpression("smile");
-                textToSpeak = "[Agnes looked at Bay, smiling.]";
-                break;
-            case 23:
-                ShowExpression("smile");
-                textToSpeak = "Bay , huh? Fancy name. I like it.";
-                break;
-            case 24:
-                ShowExpression("smile");
-                textToSpeak = "[There were a few seconds of awkward silence before Agnes spoke again.]";
-                break;
-            case 25:
-                ShowExpression("smile");
-                textToSpeak = "Hey, you wanna check out my Transpod? I decorated it with a bunch of stuff I have.";
-                break;
-            case 26:
-                ShowExpression("happy");
-                textToSpeak = "Come on, I'll even give you a free ride!";
-                break;
-            case 27:
-                ShowExpression("happy");
-                textToSpeak = "[She didn't finish her sentence when she began to walk towards the Transpod's entrance.]";
-                break;
-            case 28:
-                ShowExpression("happy");
-                textToSpeak = "[Bay had no choice but to follow her, and he did.]";
+                textToSpeak = "What do you say?";
                 break;
 
         }

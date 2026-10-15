@@ -74,7 +74,7 @@ public class IntoTheStreets02 : MonoBehaviour
         yield return new WaitForSeconds(2f);
         mainTextObject.SetActive(true);
         textBox.SetActive(true);
-        charName.GetComponent<TMP_Text>().text = "Unknown Girl";
+        charName.GetComponent<TMP_Text>().text = "";
 
         introIndex = 0;
         yield return StartCoroutine(PlayIntroLine(introIndex));
@@ -206,7 +206,7 @@ public class IntoTheStreets02 : MonoBehaviour
 
         }
 
-        charName.GetComponent<TMP_Text>().text = index < 4 ? "" : (index == 18 ? "Agnes" : "Unknown Girl");
+        charName.GetComponent<TMP_Text>().text = textToSpeak.StartsWith("[") ? "" : "Agnes";
         textBox.GetComponent<TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;

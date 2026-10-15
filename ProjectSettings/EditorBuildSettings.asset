@@ -23,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AtTheClinic.unity
     guid: 706d4e9cfa487264299c9e0d688c9593
+  - enabled: 1
+    path: Assets/Scenes/IntoTheStreets01.unity
+    guid: 49f62aa2fbc2cfa4593e255da50c94ff
+  - enabled: 1
+    path: Assets/Scenes/IntoTheStreets02.unity
+    guid: fd268ff8b10c9ef488264caaa00b3869
+  - enabled: 1
+    path: Assets/Scenes/InsideTheTranspod01.unity
+    guid: d236a84e27561c34aad4a3a2f6c95c66
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

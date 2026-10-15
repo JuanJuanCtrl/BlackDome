@@ -3,35 +3,32 @@ guid: 58acdf3e1e787bf40960630c9bb11044
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3526027275420635620
-    second: bd-logo_0
+      213: -4131062460949243656
+    second: BD_Logo_0
   - first:
-      213: 1989624664434418581
-    second: bd-logo_1
+      213: -4022558281651055385
+    second: BD_Logo_1
   - first:
-      213: -416710376283880734
-    second: bd-logo_2
+      213: -4706917446508885281
+    second: BD_Logo_2
   - first:
-      213: -2687300909529818420
-    second: bd-logo_3
+      213: -6058115804993789213
+    second: BD_Logo_3
   - first:
-      213: -5963993592975201401
-    second: bd-logo_4
+      213: -1056422404871421808
+    second: BD_Logo_4
   - first:
-      213: -5582533439526125703
-    second: bd-logo_5
+      213: 8206908200085569146
+    second: BD_Logo_5
   - first:
-      213: 6827794081133283785
-    second: bd-logo_6
+      213: 821861047557429608
+    second: BD_Logo_6
   - first:
-      213: -4695852554730752218
-    second: bd-logo_7
+      213: 7491914066294489983
+    second: BD_Logo_7
   - first:
-      213: -3738128573697842357
-    second: bd-logo_8
-  - first:
-      213: 7135409668948771461
-    second: bd-logo_9
+      213: 1016952192861800267
+    second: BD_Logo_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -140,13 +137,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bd-logo_0
+      name: BD_Logo_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 345
-        width: 1091
-        height: 1091
+        x: 78
+        y: 812
+        width: 442
+        height: 609
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1ee63cefd8011fc0800000000000000
-      internalID: -3526027275420635620
+      spriteID: 8f85b2e34948ba6c0800000000000000
+      internalID: -4131062460949243656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bd-logo_1
+      name: BD_Logo_1
       rect:
         serializedVersion: 2
-        x: 1231
-        y: 917
-        width: 438
-        height: 521
+        x: 551
+        y: 812
+        width: 378
+        height: 610
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59328ff37119c9b10800000000000000
-      internalID: 1989624664434418581
+      spriteID: 7e412e52e800d28c0800000000000000
+      internalID: -4022558281651055385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bd-logo_2
+      name: BD_Logo_2
       rect:
         serializedVersion: 2
-        x: 1710
-        y: 917
-        width: 119
-        height: 521
+        x: 960
+        y: 812
+        width: 530
+        height: 610
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e2416fde1c873af0800000000000000
-      internalID: -416710376283880734
+      spriteID: fdacfbd458badaeb0800000000000000
+      internalID: -4706917446508885281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bd-logo_3
+      name: BD_Logo_3
       rect:
         serializedVersion: 2
-        x: 1865
-        y: 906
-        width: 377
-        height: 396
+        x: 1522
+        y: 812
+        width: 448
+        height: 610
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cca14ea8f0ac4bad0800000000000000
-      internalID: -2687300909529818420
+      spriteID: 3e26a2bc5cf3deba0800000000000000
+      internalID: -6058115804993789213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bd-logo_4
+      name: BD_Logo_4
       rect:
         serializedVersion: 2
-        x: 2267
-        y: 906
-        width: 373
-        height: 396
+        x: 2001
+        y: 812
+        width: 480
+        height: 610
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,20 +240,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78be1000d63ab3da0800000000000000
-      internalID: -5963993592975201401
+      spriteID: 09000e08b65d651f0800000000000000
+      internalID: -1056422404871421808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bd-logo_5
+      name: BD_Logo_5
       rect:
         serializedVersion: 2
-        x: 2674
-        y: 917
-        width: 381
-        height: 521
+        x: 78
+        y: 18
+        width: 553
+        height: 763
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +262,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97f3e4e0a6bd682b0800000000000000
-      internalID: -5582533439526125703
+      spriteID: a7e3752a68bc4e170800000000000000
+      internalID: 8206908200085569146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bd-logo_6
+      name: BD_Logo_6
       rect:
         serializedVersion: 2
-        x: 1231
-        y: 346
-        width: 463
-        height: 520
+        x: 670
+        y: 19
+        width: 604
+        height: 762
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c9c675aa8231ce50800000000000000
-      internalID: 6827794081133283785
+      spriteID: 8691462b446d76b00800000000000000
+      internalID: 821861047557429608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bd-logo_7
+      name: BD_Logo_7
       rect:
         serializedVersion: 2
-        x: 1717
-        y: 334
-        width: 399
-        height: 397
+        x: 1314
+        y: 19
+        width: 631
+        height: 762
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,20 +306,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 627b9ad2bfaf4deb0800000000000000
-      internalID: -4695852554730752218
+      spriteID: f734c314620a8f760800000000000000
+      internalID: 7491914066294489983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bd-logo_8
+      name: BD_Logo_8
       rect:
         serializedVersion: 2
-        x: 2153
-        y: 346
-        width: 578
-        height: 385
+        x: 1985
+        y: 18
+        width: 497
+        height: 763
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,30 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b43a0002edf7f1cc0800000000000000
-      internalID: -3738128573697842357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bd-logo_9
-      rect:
-        serializedVersion: 2
-        x: 2765
-        y: 334
-        width: 385
-        height: 397
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5824494f941160360800000000000000
-      internalID: 7135409668948771461
+      spriteID: b470511a1a0fc1e00800000000000000
+      internalID: 1016952192861800267
       vertices: []
       indices: 
       edges: []
@@ -373,16 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bd-logo_0: -3526027275420635620
-      bd-logo_1: 1989624664434418581
-      bd-logo_2: -416710376283880734
-      bd-logo_3: -2687300909529818420
-      bd-logo_4: -5963993592975201401
-      bd-logo_5: -5582533439526125703
-      bd-logo_6: 6827794081133283785
-      bd-logo_7: -4695852554730752218
-      bd-logo_8: -3738128573697842357
-      bd-logo_9: 7135409668948771461
+      BD_Logo_0: -4131062460949243656
+      BD_Logo_1: -4022558281651055385
+      BD_Logo_2: -4706917446508885281
+      BD_Logo_3: -6058115804993789213
+      BD_Logo_4: -1056422404871421808
+      BD_Logo_5: 8206908200085569146
+      BD_Logo_6: 821861047557429608
+      BD_Logo_7: 7491914066294489983
+      BD_Logo_8: 1016952192861800267
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

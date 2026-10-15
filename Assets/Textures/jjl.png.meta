@@ -1,48 +1,57 @@
 fileFormatVersion: 2
-guid: f1d2db91a5e856d49a5e00c79cb06c22
+guid: 8f622b23719adc74dbbacb7e3bee6bce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6194027747257274411
-    second: BA_Logo 1_0
+      213: -5979165900317250177
+    second: jjl_0
   - first:
-      213: 4665962684806097672
-    second: BA_Logo 1_1
+      213: 7608022785098351970
+    second: jjl_1
   - first:
-      213: 6161618328646632589
-    second: BA_Logo 1_2
+      213: -6680194920615582759
+    second: jjl_2
   - first:
-      213: 9181964738821942384
-    second: BA_Logo 1_3
+      213: 5111615784622015811
+    second: jjl_3
   - first:
-      213: 7827232050360708177
-    second: BA_Logo 1_4
+      213: 8222217606370203263
+    second: jjl_4
   - first:
-      213: 3633701114455437743
-    second: BA_Logo 1_5
+      213: 1653657340293280234
+    second: jjl_5
   - first:
-      213: 5788112688898819214
-    second: BA_Logo 1_6
+      213: -5601565195615996020
+    second: jjl_6
   - first:
-      213: 346716563231758410
-    second: BA_Logo 1_7
+      213: -4114392490318723129
+    second: jjl_7
   - first:
-      213: 1805931852443212238
-    second: BA_Logo 1_8
+      213: 3114466574082653044
+    second: jjl_8
   - first:
-      213: -5310714212818824511
-    second: BA_Logo 1_9
+      213: -2873114373135476119
+    second: jjl_9
   - first:
-      213: 2243074875086278662
-    second: BA_Logo 1_10
+      213: -3919383120462444770
+    second: jjl_10
   - first:
-      213: -5940358044542087072
-    second: BA_Logo 1_11
+      213: -2208373891916534904
+    second: jjl_11
+  - first:
+      213: -5756750339635886920
+    second: jjl_12
+  - first:
+      213: -7830938684801184136
+    second: jjl_13
+  - first:
+      213: 8011355488884218131
+    second: jjl_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -146,13 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BA_Logo 1_0
+      name: jjl_0
       rect:
         serializedVersion: 2
-        x: 214
-        y: 1008
-        width: 469
-        height: 761
+        x: 22
+        y: 700
+        width: 1441
+        height: 1441
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5df21dbc4946a0aa0800000000000000
-      internalID: -6194027747257274411
+      spriteID: f7d267aea4cb50da0800000000000000
+      internalID: -5979165900317250177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_1
+      name: jjl_1
       rect:
         serializedVersion: 2
-        x: 703
-        y: 1007
-        width: 156
-        height: 665
+        x: 33
+        y: 532
+        width: 76
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80b681b2754d0c040800000000000000
-      internalID: 4665962684806097672
+      spriteID: 2658ddcf960259960800000000000000
+      internalID: 7608022785098351970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_2
+      name: jjl_2
       rect:
         serializedVersion: 2
-        x: 872
-        y: 1005
-        width: 488
-        height: 475
+        x: 122
+        y: 532
+        width: 77
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84c4886937728550800000000000000
-      internalID: 6161618328646632589
+      spriteID: 9d3e656ec1e2b43a0800000000000000
+      internalID: -6680194920615582759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_3
+      name: jjl_3
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 1013
-        width: 430
-        height: 467
+        x: 212
+        y: 532
+        width: 76
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07ce4a52844ec6f70800000000000000
-      internalID: 9181964738821942384
+      spriteID: 345ccae397b10f640800000000000000
+      internalID: 5111615784622015811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_4
+      name: jjl_4
       rect:
         serializedVersion: 2
-        x: 1783
-        y: 1263
-        width: 9
-        height: 56
+        x: 302
+        y: 532
+        width: 76
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15c6d40541aef9c60800000000000000
-      internalID: 7827232050360708177
+      spriteID: f7698ad895f2b1270800000000000000
+      internalID: 8222217606370203263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_5
+      name: jjl_5
       rect:
         serializedVersion: 2
-        x: 1781
-        y: 1232
-        width: 9
-        height: 30
+        x: 481
+        y: 532
+        width: 76
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +280,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa1be0359ef7d6230800000000000000
-      internalID: 3633701114455437743
+      spriteID: ae1f56ce698f2f610800000000000000
+      internalID: 1653657340293280234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_6
+      name: jjl_6
       rect:
         serializedVersion: 2
-        x: 8
-        y: 89
-        width: 632
-        height: 902
+        x: 596
+        y: 532
+        width: 24
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +302,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e84ceb5e2d1835050800000000000000
-      internalID: 5788112688898819214
+      spriteID: c87fd19022e3342b0800000000000000
+      internalID: -5601565195615996020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_7
+      name: jjl_7
       rect:
         serializedVersion: 2
-        x: 987
-        y: 717
-        width: 143
-        height: 144
+        x: 749
+        y: 532
+        width: 76
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +324,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a485c2590e8cfc400800000000000000
-      internalID: 346716563231758410
+      spriteID: 7c7840c34ddb6e6c0800000000000000
+      internalID: -4114392490318723129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_8
+      name: jjl_8
       rect:
         serializedVersion: 2
-        x: 1159
-        y: 231
-        width: 384
-        height: 666
+        x: 839
+        y: 532
+        width: 76
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,20 +346,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec9d0799375ff0910800000000000000
-      internalID: 1805931852443212238
+      spriteID: 47b360519dec83b20800000000000000
+      internalID: 3114466574082653044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_9
+      name: jjl_9
       rect:
         serializedVersion: 2
-        x: 628
-        y: 231
-        width: 332
-        height: 476
+        x: 923
+        y: 532
+        width: 86
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c2d0519f8d8c46b0800000000000000
-      internalID: -5310714212818824511
+      spriteID: 96ad03633b5a028d0800000000000000
+      internalID: -2873114373135476119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_10
+      name: jjl_10
       rect:
         serializedVersion: 2
-        x: 998
-        y: 242
-        width: 123
-        height: 371
+        x: 1018
+        y: 532
+        width: 76
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,20 +390,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6001f1ee6b0012f10800000000000000
-      internalID: 2243074875086278662
+      spriteID: e178c2651dd8b99c0800000000000000
+      internalID: -3919383120462444770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BA_Logo 1_11
+      name: jjl_11
       rect:
         serializedVersion: 2
-        x: 1559
-        y: 215
-        width: 415
-        height: 499
+        x: 1107
+        y: 532
+        width: 76
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,8 +412,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0605f64f4db9f8da0800000000000000
-      internalID: -5940358044542087072
+      spriteID: 88b611155a74a51e0800000000000000
+      internalID: -2208373891916534904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jjl_12
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 532
+        width: 76
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4c461111aeb10b0800000000000000
+      internalID: -5756750339635886920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jjl_13
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 532
+        width: 77
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e8f8a91cae25390800000000000000
+      internalID: -7830938684801184136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jjl_14
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 532
+        width: 76
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319d1540f5d0e2f60800000000000000
+      internalID: 8011355488884218131
       vertices: []
       indices: 
       edges: []
@@ -423,18 +498,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BA_Logo 1_0: -6194027747257274411
-      BA_Logo 1_1: 4665962684806097672
-      BA_Logo 1_10: 2243074875086278662
-      BA_Logo 1_11: -5940358044542087072
-      BA_Logo 1_2: 6161618328646632589
-      BA_Logo 1_3: 9181964738821942384
-      BA_Logo 1_4: 7827232050360708177
-      BA_Logo 1_5: 3633701114455437743
-      BA_Logo 1_6: 5788112688898819214
-      BA_Logo 1_7: 346716563231758410
-      BA_Logo 1_8: 1805931852443212238
-      BA_Logo 1_9: -5310714212818824511
+      jjl_0: -5979165900317250177
+      jjl_1: 7608022785098351970
+      jjl_10: -3919383120462444770
+      jjl_11: -2208373891916534904
+      jjl_12: -5756750339635886920
+      jjl_13: -7830938684801184136
+      jjl_14: 8011355488884218131
+      jjl_2: -6680194920615582759
+      jjl_3: 5111615784622015811
+      jjl_4: 8222217606370203263
+      jjl_5: 1653657340293280234
+      jjl_6: -5601565195615996020
+      jjl_7: -4114392490318723129
+      jjl_8: 3114466574082653044
+      jjl_9: -2873114373135476119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

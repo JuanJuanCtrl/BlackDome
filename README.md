@@ -1,4 +1,4 @@
-![README Banner](https://iili.io/nAlgkpj.png)
+![README Banner](https://iili.io/njDzhFt.png)
 
 # [SYNOPSIS]
 

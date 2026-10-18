@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 58acdf3e1e787bf40960630c9bb11044
+guid: fef75415416095d4a89d400b4c203242
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4131062460949243656
-    second: BD_Logo_0
+      213: 4124575401003346524
+    second: Black Dome Assets_0
   - first:
-      213: -4022558281651055385
-    second: BD_Logo_1
+      213: -1232539445282885342
+    second: Black Dome Assets_1
   - first:
-      213: -4706917446508885281
-    second: BD_Logo_2
+      213: -2432454866016175217
+    second: Black Dome Assets_2
   - first:
-      213: -6058115804993789213
-    second: BD_Logo_3
+      213: 4795955029746336648
+    second: Black Dome Assets_3
   - first:
-      213: -1056422404871421808
-    second: BD_Logo_4
+      213: -5534445017022300146
+    second: Black Dome Assets_4
   - first:
-      213: 8206908200085569146
-    second: BD_Logo_5
+      213: 7169533143608739112
+    second: Black Dome Assets_5
   - first:
-      213: 821861047557429608
-    second: BD_Logo_6
+      213: -5834401558988401981
+    second: Black Dome Assets_6
   - first:
-      213: 7491914066294489983
-    second: BD_Logo_7
+      213: -4183941446592091573
+    second: Black Dome Assets_7
   - first:
-      213: 1016952192861800267
-    second: BD_Logo_8
+      213: -5005250110442064334
+    second: Black Dome Assets_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -120,30 +120,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BD_Logo_0
+      name: Black Dome Assets_0
       rect:
         serializedVersion: 2
-        x: 78
-        y: 812
-        width: 442
-        height: 609
+        x: 86
+        y: 811
+        width: 439
+        height: 606
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f85b2e34948ba6c0800000000000000
-      internalID: -4131062460949243656
+      spriteID: c5a6e1a697f6d3930800000000000000
+      internalID: 4124575401003346524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BD_Logo_1
+      name: Black Dome Assets_1
       rect:
         serializedVersion: 2
-        x: 551
-        y: 812
-        width: 378
-        height: 610
+        x: 556
+        y: 811
+        width: 375
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e412e52e800d28c0800000000000000
-      internalID: -4022558281651055385
+      spriteID: 221b140a7e325eee0800000000000000
+      internalID: -1232539445282885342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BD_Logo_2
+      name: Black Dome Assets_2
       rect:
         serializedVersion: 2
-        x: 960
-        y: 812
-        width: 530
-        height: 610
+        x: 962
+        y: 811
+        width: 527
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdacfbd458badaeb0800000000000000
-      internalID: -4706917446508885281
+      spriteID: f8b7fe2ef2f2e3ed0800000000000000
+      internalID: -2432454866016175217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BD_Logo_3
+      name: Black Dome Assets_3
       rect:
         serializedVersion: 2
-        x: 1522
-        y: 812
-        width: 448
-        height: 610
+        x: 1520
+        y: 811
+        width: 446
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e26a2bc5cf3deba0800000000000000
-      internalID: -6058115804993789213
+      spriteID: 88347c280b7ae8240800000000000000
+      internalID: 4795955029746336648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BD_Logo_4
+      name: Black Dome Assets_4
       rect:
         serializedVersion: 2
-        x: 2001
-        y: 812
-        width: 480
-        height: 610
+        x: 1997
+        y: 811
+        width: 477
+        height: 607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09000e08b65d651f0800000000000000
-      internalID: -1056422404871421808
+      spriteID: e00847b6493b133b0800000000000000
+      internalID: -5534445017022300146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BD_Logo_5
+      name: Black Dome Assets_5
       rect:
         serializedVersion: 2
-        x: 78
-        y: 18
-        width: 553
-        height: 763
+        x: 86
+        y: 22
+        width: 549
+        height: 758
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7e3752a68bc4e170800000000000000
-      internalID: 8206908200085569146
+      spriteID: 8254036886c4f7360800000000000000
+      internalID: 7169533143608739112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BD_Logo_6
+      name: Black Dome Assets_6
       rect:
         serializedVersion: 2
-        x: 670
-        y: 19
-        width: 604
-        height: 762
+        x: 674
+        y: 23
+        width: 600
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8691462b446d76b00800000000000000
-      internalID: 821861047557429608
+      spriteID: 3c2d28fa1ba080fa0800000000000000
+      internalID: -5834401558988401981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BD_Logo_7
+      name: Black Dome Assets_7
       rect:
         serializedVersion: 2
         x: 1314
-        y: 19
-        width: 631
-        height: 762
+        y: 23
+        width: 627
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f734c314620a8f760800000000000000
-      internalID: 7491914066294489983
+      spriteID: b4a28dafb67afe5c0800000000000000
+      internalID: -4183941446592091573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BD_Logo_8
+      name: Black Dome Assets_8
       rect:
         serializedVersion: 2
-        x: 1985
-        y: 18
-        width: 497
-        height: 763
+        x: 1980
+        y: 22
+        width: 494
+        height: 758
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,8 +315,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b470511a1a0fc1e00800000000000000
-      internalID: 1016952192861800267
+      spriteID: 236bd132b87c98ab0800000000000000
+      internalID: -5005250110442064334
       vertices: []
       indices: 
       edges: []
@@ -348,15 +335,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BD_Logo_0: -4131062460949243656
-      BD_Logo_1: -4022558281651055385
-      BD_Logo_2: -4706917446508885281
-      BD_Logo_3: -6058115804993789213
-      BD_Logo_4: -1056422404871421808
-      BD_Logo_5: 8206908200085569146
-      BD_Logo_6: 821861047557429608
-      BD_Logo_7: 7491914066294489983
-      BD_Logo_8: 1016952192861800267
+      Black Dome Assets_0: 4124575401003346524
+      Black Dome Assets_1: -1232539445282885342
+      Black Dome Assets_2: -2432454866016175217
+      Black Dome Assets_3: 4795955029746336648
+      Black Dome Assets_4: -5534445017022300146
+      Black Dome Assets_5: 7169533143608739112
+      Black Dome Assets_6: -5834401558988401981
+      Black Dome Assets_7: -4183941446592091573
+      Black Dome Assets_8: -5005250110442064334
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

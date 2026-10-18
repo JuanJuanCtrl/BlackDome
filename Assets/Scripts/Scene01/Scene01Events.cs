@@ -88,7 +88,7 @@ public class Scene01Events : MonoBehaviour
                 break;
 
             case 5:
-                textToSpeak = "Is he okay? Is he dead?!";
+                textToSpeak = "Is he okay... Is he dead?!";
                 break;
 
             case 6:
@@ -104,7 +104,7 @@ public class Scene01Events : MonoBehaviour
                 break;
 
             case 9:
-                textToSpeak = "Three long beeps echoed and bounced off the surface of the dome, a signal for something perhaps?";
+                textToSpeak = "Three long beeps echoed and bounced off the surface of the place, a signal for something perhaps?";
                 break;
 
             case 10:

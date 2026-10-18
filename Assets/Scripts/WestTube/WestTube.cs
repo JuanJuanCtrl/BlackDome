@@ -219,39 +219,39 @@ public class WestTube : MonoBehaviour
                 ShowExpression("happy");
                 textToSpeak = "You didn't tell me about your new boyfriend, Aggy.";
                 break;
-            case 32:
+            case 33:
                 ShowExpression("embarrassed");
                 textToSpeak = "[The mask drained all human warmth from his voice, but he was probably smiling under it.]";
                 break;
-            case 33:
+            case 34:
                 ShowExpression("embarrassed");
                 textToSpeak = "[Agnes blushed, taking a quick look at Bat before returning her gaze to her brother.]";
                 break;
-            case 34:
+            case 35:
                 ShowExpression("embarrassed");
                 textToSpeak = "I'm not blushing! And he's not my boyfriend! We're just friends!";
                 break;
-            case 35:
+            case 36:
                 ShowExpression("embarrassed");
                 textToSpeak = "[Agnes didn't know how to respond, but she knew she had to keep up the act.]";
                 break;
-            case 36:
+            case 37:
                 ShowExpression("embarrassed");
                 textToSpeak = "[Ryder looked at them, an awkward silence filling the air. He then spoke again:]";
                 break;
-            case 37:
+            case 38:
                 ShowExpression("embarrassed");
                 textToSpeak = "Whatever, carry on then...";
                 break;
-            case 38:
+            case 39:
                 ShowExpression("embarrassed");
                 textToSpeak = "[But then, Ryder took a small step towards Bay, locking eyes with him.]";
                 break;
-            case 39:
+            case 40:
                 ShowExpression("embarrassed");
                 textToSpeak = "Don't you dare lay a hand on my little sister, or else...";
                 break;
-            case 40:
+            case 41:
                 ShowExpression("embarrassed");
                 textToSpeak = "[He had a threatening tone, but it was clear he was half-joking. What do you say?";
                 break;

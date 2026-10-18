@@ -132,6 +132,6 @@ public class IntroSequenceEvents : MonoBehaviour
         }
 
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
     }
 }

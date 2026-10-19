@@ -1799,6 +1799,7 @@ MonoBehaviour:
   eventPos: 0
   charName: {fileID: 252604209}
   fadeOut: {fileID: 1535045723}
+  Picture1: {fileID: 528591484}
   ChoiceButton1: {fileID: 1635607835}
   ChoiceButton2: {fileID: 1240757782}
   ChoiceButton3: {fileID: 521752600}

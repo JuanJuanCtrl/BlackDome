@@ -25,6 +25,9 @@ public class InsideTheTranspod01 : MonoBehaviour
     [SerializeField] int eventPos = 0;
     [SerializeField] GameObject charName;
     [SerializeField] GameObject fadeOut;
+    public GameObject Picture1;
+
+    bool[] characterWasActive;
 
     [Header("Choice Buttons")]
     public GameObject ChoiceButton1;
@@ -154,7 +157,7 @@ public class InsideTheTranspod01 : MonoBehaviour
                 break;
             case 8:
                 ShowExpression("smile");
-                textToSpeak = "[She fiddled with a few buttons and the Transpod was off the ground and floating.]";
+                textToSpeak = "[She fiddled with a few buttons and the Transpod rocketed off the ground and began floating.]";
                 break;
             case 9:
                 ShowExpression("smile");
@@ -224,6 +227,12 @@ public class InsideTheTranspod01 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return new WaitUntil(() => textLength >= currentTextLength);
         yield return new WaitForSeconds(0.5f);
+
+        // Fade Picture1 out when Bay looks out the window.
+        if (index == 20)
+        {
+            yield return StartCoroutine(FadeOutPictureAndCharacters());
+        }
 
         // -------------------------------------------------
         // CHOICE POINT (after Case 22)
@@ -468,6 +477,12 @@ public class InsideTheTranspod01 : MonoBehaviour
         // Wait until the entire line has finished typing
         yield return new WaitUntil(() => textLength >= currentTextLength);
 
+        // Fade Picture1 back in when the DCP is revealed.
+        if (dialogueLine == "Those are officers from Dome Civil Protection, we call it the DCP.")
+        {
+            yield return StartCoroutine(FadeInPictureAndCharacters());
+        }
+
         // The line is completely typed.
         // Show Next so the player can manually continue.
         nextButton.SetActive(true);
@@ -479,6 +494,104 @@ public class InsideTheTranspod01 : MonoBehaviour
         // Do NOT continue automatically.
         // Wait here until the player presses Next.
         yield return new WaitUntil(() => waitingForChoiceNext == false);
+    }
+
+    GameObject[] GetCharacterImages()
+    {
+        return new GameObject[]
+        {
+            charNeutral,
+            charSurprised,
+            charHappy,
+            charEmbarrassed,
+            charConfused,
+            charSad,
+            charExcited
+        };
+    }
+
+    IEnumerator FadeOutPictureAndCharacters()
+    {
+        GameObject[] characters = GetCharacterImages();
+        characterWasActive = new bool[characters.Length];
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            characterWasActive[i] = characters[i] != null && characters[i].activeSelf;
+        }
+
+        yield return StartCoroutine(FadeObjects(Picture1, characters, false));
+    }
+
+    IEnumerator FadeInPictureAndCharacters()
+    {
+        GameObject[] characters = GetCharacterImages();
+        yield return StartCoroutine(FadeObjects(Picture1, characters, true));
+    }
+
+    IEnumerator FadeObjects(GameObject picture, GameObject[] characters, bool fadeIn)
+    {
+        int objectCount = characters.Length + 1;
+        CanvasGroup[] canvasGroups = new CanvasGroup[objectCount];
+        GameObject[] objects = new GameObject[objectCount];
+        objects[0] = picture;
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            objects[i + 1] = characters[i];
+        }
+
+        for (int i = 0; i < objectCount; i++)
+        {
+            if (objects[i] == null)
+                continue;
+
+            if (fadeIn && (i == 0 || characterWasActive == null || characterWasActive[i - 1]))
+                objects[i].SetActive(true);
+
+            canvasGroups[i] = objects[i].GetComponent<CanvasGroup>();
+            if (canvasGroups[i] == null)
+                canvasGroups[i] = objects[i].AddComponent<CanvasGroup>();
+        }
+
+        float[] startAlphas = new float[objectCount];
+        for (int i = 0; i < objectCount; i++)
+        {
+            if (canvasGroups[i] == null)
+                continue;
+
+            startAlphas[i] = fadeIn ? 0f : canvasGroups[i].alpha;
+            if (fadeIn)
+                canvasGroups[i].alpha = 0f;
+        }
+
+        float fadeDuration = 1f;
+        float timer = 0f;
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+
+            for (int i = 0; i < objectCount; i++)
+            {
+                if (canvasGroups[i] == null)
+                    continue;
+
+                float targetAlpha = fadeIn ? 1f : 0f;
+                canvasGroups[i].alpha = Mathf.Lerp(startAlphas[i], targetAlpha, timer / fadeDuration);
+            }
+
+            yield return null;
+        }
+
+        for (int i = 0; i < objectCount; i++)
+        {
+            if (canvasGroups[i] == null)
+                continue;
+
+            canvasGroups[i].alpha = fadeIn ? 1f : 0f;
+            if (!fadeIn)
+                objects[i].SetActive(false);
+        }
     }
 
     void FinishChoice()

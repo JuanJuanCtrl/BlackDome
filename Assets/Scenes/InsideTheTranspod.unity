@@ -983,6 +983,7 @@ GameObject:
   - component: {fileID: 521752604}
   - component: {fileID: 521752603}
   - component: {fileID: 521752602}
+  - component: {fileID: 521752605}
   m_Layer: 5
   m_Name: ChoiceButton3
   m_TagString: Untagged
@@ -1007,7 +1008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 592, y: -262.81985}
+  m_AnchoredPosition: {x: 592, y: -217.18985}
   m_SizeDelta: {x: 650.01, y: 134.3603}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521752602
@@ -1104,6 +1105,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521752600}
   m_CullTransparentMesh: 1
+--- !u!95 &521752605
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521752600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2a7e06549cd6f0346920d7c291310b7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &528591484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,6 +1964,7 @@ GameObject:
   - component: {fileID: 1240757786}
   - component: {fileID: 1240757785}
   - component: {fileID: 1240757784}
+  - component: {fileID: 1240757787}
   m_Layer: 5
   m_Name: ChoiceButton2
   m_TagString: Untagged
@@ -1965,7 +1989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 592, y: -97.630035}
+  m_AnchoredPosition: {x: 592, y: -52.00003}
   m_SizeDelta: {x: 650.01, y: 134.3603}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1240757784
@@ -2062,6 +2086,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240757782}
   m_CullTransparentMesh: 1
+--- !u!95 &1240757787
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240757782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2a7e06549cd6f0346920d7c291310b7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1271854622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,6 +2936,7 @@ GameObject:
   - component: {fileID: 1635607839}
   - component: {fileID: 1635607838}
   - component: {fileID: 1635607837}
+  - component: {fileID: 1635607840}
   m_Layer: 5
   m_Name: ChoiceButton1
   m_TagString: Untagged
@@ -2914,7 +2961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 592, y: 70.369995}
+  m_AnchoredPosition: {x: 592, y: 116}
   m_SizeDelta: {x: 650.01, y: 134.3603}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1635607837
@@ -3011,6 +3058,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635607835}
   m_CullTransparentMesh: 1
+--- !u!95 &1635607840
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635607835}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2a7e06549cd6f0346920d7c291310b7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1710226082
 GameObject:
   m_ObjectHideFlags: 0

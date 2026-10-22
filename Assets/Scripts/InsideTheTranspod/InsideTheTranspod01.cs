@@ -165,7 +165,7 @@ public class InsideTheTranspod01 : MonoBehaviour
                 break;
             case 10:
                 ShowExpression("smile");
-                textToSpeak = "[But Agnes' expression expression was more... purposeful now.]";
+                textToSpeak = "[But Agnes' expression was more... purposeful now.]";
                 break;
             case 11:
                 ShowExpression("smile");

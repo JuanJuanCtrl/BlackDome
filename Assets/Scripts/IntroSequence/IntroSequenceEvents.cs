@@ -69,10 +69,10 @@ public class IntroSequenceEvents : MonoBehaviour
                 textToSpeak = "...the world will shine bright...";
                 break;
             case 5:
-                textToSpeak = "...and they will be gone.";
+                textToSpeak = "...and they will be gone. The darkness will be gone.";
                 break;
             case 6:
-                textToSpeak = "Forever.";
+                textToSpeak = "And the light will prevail. Forever.";
                 break;
         }
 

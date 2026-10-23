@@ -68,27 +68,27 @@ public class Scene01Events : MonoBehaviour
         switch (index)
         {
             case 0:
-                textToSpeak = "Bay could only hear the sounds of people around him, being concious enough to know that he was in a public place, but not concious enough to know where he was or what was going on.";
+                textToSpeak = "He could only hear the sounds of people around him, being concious enough to know that he was in a public place, but not concious enough to know where he was or what was going on.";
                 break;
 
             case 1:
-                textToSpeak = "Who is this?";
+                textToSpeak = " \"Who is this?\" said a man.";
                 break;
 
             case 2:
-                textToSpeak = "Where’d he come from?";
+                textToSpeak = " \"Where’d he come from?\" said a woman next to the man.";
                 break;
 
             case 3:
-                textToSpeak = "Looks like he fell from the sky, or something…";
+                textToSpeak = " \"Looks like he fell from the sky, or something…\" said a teenage boy.";
                 break;
 
             case 4:
-                textToSpeak = "Look at his hair, it’s blonde!";
+                textToSpeak = " \"Look at his hair, it’s blonde!\" said a little girl.";
                 break;
 
             case 5:
-                textToSpeak = "Is he okay... Is he dead?!";
+                textToSpeak = " \"Is he okay... He's not dead, is he?\" said a mother with a baby in her arms.";
                 break;
 
             case 6:
@@ -96,7 +96,7 @@ public class Scene01Events : MonoBehaviour
                 break;
 
             case 7:
-                textToSpeak = "They’re definitely getting him…";
+                textToSpeak = " \"So the time has finally come...\" said a voice he couldn't recognize. It was quickly drowned by others surrounding him.";
                 break;
 
             case 8:
@@ -124,24 +124,25 @@ public class Scene01Events : MonoBehaviour
                 break;
 
             case 14:
-                textToSpeak = "He’s alive. Subject A10, name’s Bay Ausman.";
+                textToSpeak = " \"He’s alive. Subject A10, name’s Bay Ausman.\" ";
                 break;
 
             case 15:
-                textToSpeak = "Yeah, he’s the one — definitely.";
+                textToSpeak = " \"Yeah, I know. He's finally here — it was about time.\" ";
                 break;
 
             case 16:
-                textToSpeak = "Do you think it’s really possible, I mean—";
+                textToSpeak = " \"Do you think it’s really possible, I mean—\" ";
                 break;
 
             case 17:
-                textToSpeak = "Yeah, this is the one. He’ll soon learn that, but for now… let’s take him to the place.";
+                textToSpeak = " \"Yeah, I know it. We should know it. He’ll soon learn that, but for now… let’s take him to the place.\" ";
                 break;
 
             case 18:
-                textToSpeak = "Yeah, let’s go.";
+                textToSpeak = " \"Yeah, let’s go. He'll eventually learn.\" ";
                 break;
+                
 
             case 19:
                 textToSpeak = " . . . ";

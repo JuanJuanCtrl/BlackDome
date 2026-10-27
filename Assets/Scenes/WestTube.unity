@@ -2431,6 +2431,7 @@ MonoBehaviour:
   charConfused: {fileID: 1475773548}
   charSad: {fileID: 1807709757}
   charExcited: {fileID: 1567452979}
+  charMasked: {fileID: 311618198}
   fadeScreenIn: {fileID: 27370943}
   textBox: {fileID: 667647221}
   textToSpeak: 

@@ -15,6 +15,7 @@ public class WestTube : MonoBehaviour
     public GameObject charConfused;
     public GameObject charSad;
     public GameObject charExcited;
+    public GameObject charMasked;
 
     [Header("UI")]
     public GameObject fadeScreenIn;
@@ -78,6 +79,7 @@ public class WestTube : MonoBehaviour
         charConfused.SetActive(false);
         charSad.SetActive(false);
         charExcited.SetActive(false);
+        charMasked.SetActive(false);
     }
 
     void ShowExpression(string expression)
@@ -97,6 +99,7 @@ public class WestTube : MonoBehaviour
             case "confused":    charConfused.SetActive(true); break;
             case "sad":         charSad.SetActive(true); break;
             case "excited":     charExcited.SetActive(true); break;
+            case "masked":      charMasked.SetActive(true); break;
         }
     }
 
@@ -105,7 +108,7 @@ public class WestTube : MonoBehaviour
         GameObject[] expressions =
         {
             charNeutral, charSurprised, charHappy, charEmbarrassed,
-            charConfused, charSad, charExcited
+            charConfused, charSad, charExcited, charMasked
         };
 
         foreach (GameObject expression in expressions)
@@ -373,9 +376,14 @@ public class WestTube : MonoBehaviour
 
         }
 
-        charName.GetComponent<TMP_Text>().text = textToSpeak.StartsWith("[")
+        string speaker = textToSpeak.StartsWith("[")
             ? ""
-            : index == 32 || index == 38 ? "Ryder" : "Agnes";
+            : index == 32 || index == 38 || index == 40 ? "Ryder" : "Agnes";
+
+        charName.GetComponent<TMP_Text>().text = speaker;
+
+        if (speaker == "Ryder")
+            ShowExpression("masked");
         textBox.GetComponent<TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -602,6 +610,9 @@ public class WestTube : MonoBehaviour
 
         // Narration (lines wrapped in brackets) has no character name
         charName.GetComponent<TMP_Text>().text = textToSpeak.StartsWith("[") ? "" : dialogueLine.speaker;
+
+        if (dialogueLine.speaker == "Ryder")
+            ShowExpression("masked");
 
         textBox.GetComponent<TMP_Text>().text = textToSpeak;
 

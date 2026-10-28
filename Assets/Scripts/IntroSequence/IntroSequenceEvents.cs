@@ -66,14 +66,54 @@ public class IntroSequenceEvents : MonoBehaviour
                 textToSpeak = "Only then...";
                 break;
             case 4:
-                textToSpeak = "...the world will shine bright...";
+                textToSpeak = "...the world will shine bright.";
                 break;
             case 5:
-                textToSpeak = "...and they will be gone. The darkness will be gone.";
+                textToSpeak = "You know how I know? Perhaps not...";
                 break;
             case 6:
-                textToSpeak = "And the light will prevail. Forever.";
+                textToSpeak = "...but it is a fact that already many take for granted.";
                 break;
+            case 7:
+                textToSpeak = "Darkness can consume you in the scarcity of light.";
+                break;
+            case 8:
+                textToSpeak = "For it's the latter reason that you and I can have a world as bright as...";
+                break;
+            case 9:
+                textToSpeak = "But it is not the outside world.";
+                break;
+            case 10:
+                textToSpeak = "It is your world.";
+                break;
+            case 11:
+                textToSpeak = "The one you, and only you, can perceive.";
+                break;
+            case 12:
+                textToSpeak = "Darkness prevails in the world of the people, but light prevails in your world.";
+                break;
+            case 13:
+                textToSpeak = "As hard as it may seem at first, the light is always there—omnipresent...";
+                break;
+            case 14:
+                textToSpeak = "...waiting.";
+                break;
+            case 15:
+                textToSpeak = "Remember, never confuse light for darkness...";
+                break;
+            case 16:
+                textToSpeak = "...for it's the greatest deception of all...";
+                break;
+            case 17:
+                textToSpeak = "...the greatest error that a human being can commit.";
+                break;
+            case 18:
+                textToSpeak = "And you, my friend, are a human being.";
+                break;
+            case 19:
+                textToSpeak = "A human being, and a human being alone, can find the light.";
+                break;
+                
         }
 
         tmp.text = "";
@@ -110,7 +150,7 @@ public class IntroSequenceEvents : MonoBehaviour
 
         introIndex++;
 
-        if (introIndex <= 6)
+        if (introIndex <= 18)
         {
             StartCoroutine(PlayIntroLine(introIndex));
         }
@@ -131,7 +171,7 @@ public class IntroSequenceEvents : MonoBehaviour
             fadeOut.SetActive(true);
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         SceneManager.LoadScene(4);
     }
 }

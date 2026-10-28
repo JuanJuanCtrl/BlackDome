@@ -557,7 +557,7 @@ public class WestTube : MonoBehaviour
     DialogueLine[] aftermathDialogue =
     {
         new DialogueLine("", "[Agnes' eyes widened.]"),
-        new DialogueLine("Agnes", "Don't be too harsh with him, he's just... different."),
+        new DialogueLine("Agnes", "Don't be too harsh with him, he's just... different.", "embarrassed"),
         new DialogueLine("", "[Ryder stepped out of their way, letting them continue.]"),
         new DialogueLine("Ryder", "Whatever, just don't do anything dumb that might get me in trouble."),
         new DialogueLine("Ryder", "I still got to fill my monthly quota."),
@@ -613,6 +613,8 @@ public class WestTube : MonoBehaviour
 
         if (dialogueLine.speaker == "Ryder")
             ShowExpression("masked");
+        else if (!string.IsNullOrEmpty(dialogueLine.expression))
+            ShowExpression(dialogueLine.expression);
 
         textBox.GetComponent<TMP_Text>().text = textToSpeak;
 
@@ -668,11 +670,13 @@ public class WestTube : MonoBehaviour
     {
         public string speaker;
         public string text;
+        public string expression;
 
-        public DialogueLine(string speaker, string text)
+        public DialogueLine(string speaker, string text, string expression = null)
         {
             this.speaker = speaker;
             this.text = text;
+            this.expression = expression;
         }
     }
 }

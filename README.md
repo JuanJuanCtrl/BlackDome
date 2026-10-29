@@ -4,7 +4,7 @@
 
 <p>A dark, thrilling visual novel about a teenage boy who falls into an underground dome, and must find a way out.</p> 
 <p>He does not remember anything from his past life, but as he gets to know the people and his surroundings...</p>
-<p>...he questions if returning to the surface is really the best idea.</p>
+<p>...he learns that it's not what it looks like out there./p>
 
 <br><br>
 

@@ -208,7 +208,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 98b040e618cf42d4abbeacd250a32294, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1046,14 +1046,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113389820}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c97dad7e16bd76408df259ae450037b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusicFader
   audioSource: {fileID: 119962308}
   playOnStart: 1
-  fadeInDuration: 0.5
+  fadeInDuration: 0
   fadeOutDuration: 5
   fadeoutObject: {fileID: 2066976440}
   fadeoutObjectName: Fadeout

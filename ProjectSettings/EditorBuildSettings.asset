@@ -15,26 +15,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 5c66c94c6054b1146a21caebf333056a
   - enabled: 1
-    path: Assets/Scenes/IntroSequence.unity
+    path: Assets/Scenes/Chapter1/IntroSequence.unity
     guid: ff5a2591bf75fbf4db14f1393e98d3a5
   - enabled: 1
-    path: Assets/Scenes/UnconStart.unity
+    path: Assets/Scenes/Chapter1/UnconStart.unity
     guid: 36cde3745819b764ab6062cd4bedc057
   - enabled: 1
-    path: Assets/Scenes/AtTheClinic.unity
+    path: Assets/Scenes/Chapter1/AtTheClinic.unity
     guid: 706d4e9cfa487264299c9e0d688c9593
   - enabled: 1
-    path: Assets/Scenes/IntoTheStreets01.unity
+    path: Assets/Scenes/Chapter1/IntoTheStreets01.unity
     guid: 49f62aa2fbc2cfa4593e255da50c94ff
   - enabled: 1
-    path: Assets/Scenes/IntoTheStreets02.unity
+    path: Assets/Scenes/Chapter1/IntoTheStreets02.unity
     guid: fd268ff8b10c9ef488264caaa00b3869
   - enabled: 1
-    path: Assets/Scenes/InsideTheTranspod.unity
+    path: Assets/Scenes/Chapter1/InsideTheTranspod.unity
     guid: d236a84e27561c34aad4a3a2f6c95c66
   - enabled: 1
-    path: Assets/Scenes/WestTube.unity
+    path: Assets/Scenes/Chapter1/WestTube.unity
     guid: 62743fe7cdf081447919424c641e7046
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/IntoTheWestTube.unity
+    guid: cc312c633d9a6784a98a8e70fca210b3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

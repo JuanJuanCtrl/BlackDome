@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1065850826}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InsideTheTranspod01, Assembly-CSharp
         m_MethodName: ChoiceButton3Pressed
         m_Mode: 1
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d50c1f6f8fb83d2459c17c58420231f8, type: 3}
+  m_Texture: {fileID: 2800000, guid: 041203db1baa71243b641300658c334e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1553,6 +1553,78 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &772535896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772535897}
+  - component: {fileID: 772535899}
+  - component: {fileID: 772535898}
+  m_Layer: 5
+  m_Name: Picture3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &772535897
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772535896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015582266}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000030212, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &772535898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772535896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 7f4297fcb603aec4385f4941ab2c251b, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &772535899
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772535896}
+  m_CullTransparentMesh: 1
 --- !u!1 &884046341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,7 +1819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: eda5c706067964a4c8863b64801834dd, type: 3}
+  m_Texture: {fileID: 2800000, guid: ccf278245ca3553468885adb5ecdd244, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1771,7 +1843,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1065850823}
-  - component: {fileID: 1065850826}
   - component: {fileID: 1065850827}
   m_Layer: 0
   m_Name: SceneControl
@@ -1795,7 +1866,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1065850826
+--- !u!114 &1065850827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1804,9 +1875,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1065850821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2109c27d63971a447a514ed611850cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 53d359f025cb2b04491315028d1ac6bd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InsideTheTranspod01
+  m_EditorClassIdentifier: Assembly-CSharp::IntoTheWestTube
   charNeutral: {fileID: 1413493139}
   charSurprised: {fileID: 640619712}
   charHappy: {fileID: 2126314756}
@@ -1828,39 +1899,6 @@ MonoBehaviour:
   ChoiceButton1: {fileID: 1635607835}
   ChoiceButton2: {fileID: 1240757782}
   ChoiceButton3: {fileID: 521752600}
---- !u!114 &1065850827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065850821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53d359f025cb2b04491315028d1ac6bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IntoTheWestTube
-  charNeutral: {fileID: 0}
-  charSurprised: {fileID: 0}
-  charHappy: {fileID: 0}
-  charEmbarrassed: {fileID: 0}
-  charConfused: {fileID: 0}
-  charSad: {fileID: 0}
-  charExcited: {fileID: 0}
-  fadeScreenIn: {fileID: 0}
-  textBox: {fileID: 0}
-  textToSpeak: 
-  currentTextLength: 0
-  textLength: 0
-  mainTextObject: {fileID: 0}
-  nextButton: {fileID: 0}
-  eventPos: 0
-  charName: {fileID: 0}
-  fadeOut: {fileID: 0}
-  Picture1: {fileID: 0}
-  ChoiceButton1: {fileID: 0}
-  ChoiceButton2: {fileID: 0}
-  ChoiceButton3: {fileID: 0}
 --- !u!1 &1131499545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +1972,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131499545}
+  m_CullTransparentMesh: 1
+--- !u!1 &1194565889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1194565890}
+  - component: {fileID: 1194565892}
+  - component: {fileID: 1194565891}
+  m_Layer: 5
+  m_Name: Picture4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1194565890
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194565889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015582266}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000030212, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1194565891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194565889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: d38dc34eb80451d468596e8e1545723a, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1194565892
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194565889}
   m_CullTransparentMesh: 1
 --- !u!1 &1200498479
 GameObject:
@@ -2071,7 +2181,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1065850826}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InsideTheTranspod01, Assembly-CSharp
         m_MethodName: ChoiceButton2Pressed
         m_Mode: 1
@@ -2364,7 +2474,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1065850826}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InsideTheTranspod01, Assembly-CSharp
         m_MethodName: NextButton
         m_Mode: 1
@@ -3172,7 +3282,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1065850826}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InsideTheTranspod01, Assembly-CSharp
         m_MethodName: ChoiceButton1Pressed
         m_Mode: 1
@@ -3597,6 +3707,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1194565890}
+  - {fileID: 772535897}
   - {fileID: 940175535}
   - {fileID: 528591485}
   - {fileID: 1635607836}

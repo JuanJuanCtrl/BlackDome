@@ -125,93 +125,41 @@ public class IntoTheWestTube : MonoBehaviour
         {
             case 0:
                 ShowExpression("smile");
-                textToSpeak = "[Once inside, the Transpod's door closed automatically when it detected Agnes' presence.]";
+                textToSpeak = "[They were further into the Tube, and they had reached the Tube Intersection.]";
                 break;
             case 1:
                 ShowExpression("smile");
-                textToSpeak = "[Bay looked around the Transpod, amazed.]";
+                textToSpeak = "[A four-way intersection that connected the domes from each direction.]";
                 break;
             case 2:
                 ShowExpression("smile");
-                textToSpeak = "[Agnes noticed his expression and smiled.";
+                textToSpeak = "[Bay looked around, ashen dust floated in the atmosphere.]";
                 break;
             case 3:
                 ShowExpression("smile");
-                textToSpeak = "[The girl opened her mouth to speak:]";
+                textToSpeak = "[From time to time, he saw people walking from Dome to Dome, their expressions calm and controller...";
                 break;
             case 4:
                 ShowExpression("smile");
-                textToSpeak = "Pretty cool, huh?";
+                textToSpeak = "[...in every sense of the word.]";
                 break;
             case 5:
                 ShowExpression("smile");
-                textToSpeak = "Transpods have this mechanism where it's able to detect its owner, and it opens and closes automatically when it does.";
+                textToSpeak = "[After walking for what seemed likes ages, Agnes stopped dead in her tracks.]";
                 break;
             case 6:
                 ShowExpression("smile");
-                textToSpeak = "Transpods are blank when manufactured by default, and they are assigned to you once you're old enough.";
+                textToSpeak = "Here we are.";
                 break;
             case 7:
                 ShowExpression("smile");
-                textToSpeak = "[Agnes continued to talk about her Transpod passionately, but once it was over—her expression changed.]";
+                textToSpeak = "[Bay turned his head, they were standing before a maintenance door with a sign.]";
                 break;
             case 8:
                 ShowExpression("smile");
-                textToSpeak = "[She fiddled with a few buttons and the Transpod rocketed off the ground and began floating.]";
+                textToSpeak = "[The sign read: 'Domemployers Maintenance Access Only.' in bold, capital letters.]";
                 break;
             case 9:
-                ShowExpression("smile");
-                textToSpeak = "[Bay felt that despite the fast launch, he didn't get flung around.]";
-                break;
-            case 10:
-                ShowExpression("smile");
-                textToSpeak = "[But Agnes' expression was more... purposeful now.]";
-                break;
-            case 11:
-                ShowExpression("smile");
-                textToSpeak = "[Whatever came out of her mouth next, was something he needed to hear.]";
-                break;
-            case 12:
-                ShowExpression("smile");
-                textToSpeak = "So, now that we're alone—nobody can listen to us.";
-                break;
-            case 13:
-                ShowExpression("smile");
-                textToSpeak = "[She looked out the window, both ways before coming to face him again. Her expression was serious now.]";
-                break;
-            case 14:
-                ShowExpression("smile");
-                textToSpeak = "I know who you are, Bay.";
-                break;
-            case 15:
-                ShowExpression("smile");
-                textToSpeak = "You are from The Surface, you are what they call a Dustbreather.";
-                break;
-            case 16:
-                ShowExpression("smile");
-                textToSpeak = "They don't like people like you around here, you better be safe.";
-                break;
-            case 17:
-                ShowExpression("smile");
-                textToSpeak = "Right now, they are probably looking for you. I can help you disguise yourself, give you a place to live.";
-                break;
-            case 18:
-                ShowExpression("smile");
-                textToSpeak = "But, it may be difficult—there are those who already know what you look like.";
-                break;
-            case 19:
-                ShowExpression("smile");
-                textToSpeak = "They are the ones who we should look out for, in case they snitch...";
-                break;
-            case 20:
-                ShowExpression("smile");
-                textToSpeak = "[As she spat new information at him, he looked out the window out of curiosity.]";
-                break;
-            case 21:
-                ShowExpression("smile");
-                textToSpeak = "[He noticed Transpods like the one they were riding, but they were black and floated close to each others.]";
-                break;
-            case 22:
                 ShowExpression("smile");
                 textToSpeak = "[What do you say?]";
                 break;

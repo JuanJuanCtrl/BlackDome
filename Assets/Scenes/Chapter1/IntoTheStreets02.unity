@@ -1181,7 +1181,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: ba6d5043e42e770489fce5d2487aae7a, type: 3}
+  m_Resource: {fileID: 8300000, guid: f021b255f98b26140bfb3527b9ce912e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.29
   m_Pitch: 1
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   playOnStart: 1
   fadeInDuration: 2
   fadeOutDuration: 1.5
-  fadeoutObject: {fileID: 0}
+  fadeoutObject: {fileID: 1535045723}
   fadeoutObjectName: Fadeout
   stopWhenSilent: 0
   ignoreTimeScale: 0

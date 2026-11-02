@@ -89,19 +89,19 @@ public class IntoTheStreets02 : MonoBehaviour
         {
             case 0:
                 ShowExpression("smile");
-                textToSpeak = "A young girl, with long light blonde hair and blue, crystalline eyes.";
+                textToSpeak = "[A young girl, with long light blonde hair and blue, crystalline eyes.]";
                 break;
             case 1:
                 ShowExpression("smile");
-                textToSpeak = "She wears a black full-body suit, loose enough to let her body breath. ";
+                textToSpeak = "[She wears a black full-body suit, loose enough to let her body breath.]";
                 break;
             case 2:
                 ShowExpression("smile");
-                textToSpeak = "The girl looked up at Bay, who was still looking at her.";
+                textToSpeak = "[The girl looked up at Bay, who was still looking at her.]";
                 break;
             case 3:
                 ShowExpression("smile");
-                textToSpeak = "The girl opened her mouth to speak:";
+                textToSpeak = "[The girl opened her mouth to speak:]";
                 break;
             case 4:
                 ShowExpression("happy");

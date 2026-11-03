@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter1/WestTube.unity
     guid: 62743fe7cdf081447919424c641e7046
   - enabled: 1
-    path: Assets/Scenes/Chapter1/IntoTheWestTube.unity
+    path: Assets/Scenes/Chapter1/IntoTheWestTube01.unity
     guid: cc312c633d9a6784a98a8e70fca210b3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

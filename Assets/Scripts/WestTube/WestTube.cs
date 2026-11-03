@@ -661,7 +661,7 @@ public class WestTube : MonoBehaviour
         textBox.SetActive(true);
         fadeOut.SetActive(true);
         yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(10);
     }
 
     // A single line of dialogue: who is speaking (empty for narration)

@@ -1056,8 +1056,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InsideTheTranspod01, Assembly-CSharp
+      - m_Target: {fileID: 1065850827}
+        m_TargetAssemblyTypeName: IntoTheWestTube, Assembly-CSharp
         m_MethodName: ChoiceButton3Pressed
         m_Mode: 1
         m_Arguments:
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WHAT ARE THOSE?
+  m_text: DOMEMPLOYERS?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 399e316338c946b4c8328c2979f79dfd, type: 2}
   m_sharedMaterial: {fileID: -5228803328055754320, guid: 399e316338c946b4c8328c2979f79dfd, type: 2}
@@ -1896,6 +1896,7 @@ MonoBehaviour:
   charName: {fileID: 252604209}
   fadeOut: {fileID: 1535045723}
   Picture1: {fileID: 528591484}
+  Picture2: {fileID: 940175534}
   ChoiceButton1: {fileID: 1635607835}
   ChoiceButton2: {fileID: 1240757782}
   ChoiceButton3: {fileID: 521752600}
@@ -1972,78 +1973,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131499545}
-  m_CullTransparentMesh: 1
---- !u!1 &1194565889
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1194565890}
-  - component: {fileID: 1194565892}
-  - component: {fileID: 1194565891}
-  m_Layer: 5
-  m_Name: Picture4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1194565890
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194565889}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2015582266}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030212, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1194565891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194565889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d38dc34eb80451d468596e8e1545723a, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1194565892
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194565889}
   m_CullTransparentMesh: 1
 --- !u!1 &1200498479
 GameObject:
@@ -2181,8 +2110,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InsideTheTranspod01, Assembly-CSharp
+      - m_Target: {fileID: 1065850827}
+        m_TargetAssemblyTypeName: IntoTheWestTube, Assembly-CSharp
         m_MethodName: ChoiceButton2Pressed
         m_Mode: 1
         m_Arguments:
@@ -2310,7 +2239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THOSE LOOK LIKE A BAD TIME!
+  m_text: WHERE ARE WE?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 399e316338c946b4c8328c2979f79dfd, type: 2}
   m_sharedMaterial: {fileID: -5228803328055754320, guid: 399e316338c946b4c8328c2979f79dfd, type: 2}
@@ -2474,8 +2403,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InsideTheTranspod01, Assembly-CSharp
+      - m_Target: {fileID: 1065850827}
+        m_TargetAssemblyTypeName: IntoTheWestTube, Assembly-CSharp
         m_MethodName: NextButton
         m_Mode: 1
         m_Arguments:
@@ -2865,7 +2794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THOSE LOOK SICK!
+  m_text: NEW RECRUIT?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 399e316338c946b4c8328c2979f79dfd, type: 2}
   m_sharedMaterial: {fileID: -5228803328055754320, guid: 399e316338c946b4c8328c2979f79dfd, type: 2}
@@ -3282,8 +3211,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InsideTheTranspod01, Assembly-CSharp
+      - m_Target: {fileID: 1065850827}
+        m_TargetAssemblyTypeName: IntoTheWestTube, Assembly-CSharp
         m_MethodName: ChoiceButton1Pressed
         m_Mode: 1
         m_Arguments:
@@ -3707,7 +3636,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1194565890}
   - {fileID: 772535897}
   - {fileID: 940175535}
   - {fileID: 528591485}

@@ -4,7 +4,7 @@
 
 <p>A dark, thrilling visual novel about a teenage boy who falls into an underground dome, and must find a way out.</p> 
 <p>He does not remember anything from his past life, but as he gets to know the people and his surroundings...</p>
-<p>...he learns that it's not what it looks like out there./p>
+<p>...he learns that it's not what it looks like out there.</p>
 
 <br><br>
 
@@ -17,7 +17,3 @@
 
 *<p>10/28/26 Update: Today, I finished writing the first chapter of Black Dome. Now that's left is adapting that writing into the game itself, which is what I have been doing since the beginning. It concludes on a cliffhanger, and I think it will be all I will be doing this first semester. </p>*
 *<p>The first chapter does not include any story branching, which is one of the features I planned to include. I'll check how I can integrate a branch in the current story, but for now my current goal is finishing the first chapter of the game itself.*
-
-<br><br>
-
-**README: v2**

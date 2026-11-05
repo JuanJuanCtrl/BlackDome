@@ -1,0 +1,574 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
+
+public class IntoTheWestTube02 : MonoBehaviour
+{
+    [Header("Character Expressions")]
+    public GameObject charNeutral;
+    public GameObject charSurprised;
+    public GameObject charHappy;
+    public GameObject charEmbarrassed;
+    public GameObject charConfused;
+    public GameObject charSad;
+    public GameObject charExcited;
+
+    [Header("UI")]
+    public GameObject fadeScreenIn;
+    public GameObject textBox;
+    [SerializeField] string textToSpeak;
+    [SerializeField] int currentTextLength;
+    [SerializeField] int textLength;
+    [SerializeField] GameObject mainTextObject;
+    [SerializeField] GameObject nextButton;
+    [SerializeField] int eventPos = 0;
+    [SerializeField] GameObject charName;
+    [SerializeField] GameObject fadeOut;
+    public GameObject Picture1;
+    public GameObject Picture2;
+
+    bool[] characterWasActive;
+    bool characterExpressionsHidden;
+
+    [Header("Choice Buttons")]
+    public GameObject ChoiceButton1;
+    public GameObject ChoiceButton2;
+    public GameObject ChoiceButton3;
+
+    int introIndex = 0;
+    bool isTyping = false; // Prevents spamming Next
+
+    // Prevents the player from pressing buttons while a choice dialogue is running
+    bool choiceDialoguePlaying = false;
+
+    // Used to make choice dialogue wait for the player to click Next
+    bool waitingForChoiceNext = false;
+
+    // The intro line "[What do you say?]" — the choices appear right after it
+    const int ChoicePointIndex = 9;
+
+    void Update()
+    {
+        textLength = TextCreator.charCount;
+    }
+
+    void Start()
+    {
+        // Hide the choice buttons at the beginning
+        if (ChoiceButton1 != null)
+            ChoiceButton1.SetActive(false);
+
+        if (ChoiceButton2 != null)
+            ChoiceButton2.SetActive(false);
+
+        if (ChoiceButton3 != null)
+            ChoiceButton3.SetActive(false);
+
+        StartCoroutine(EventStarter());
+        nextButton.SetActive(false); // Ensure it's hidden at start
+    }
+
+    void HideAllExpressions()
+    {
+        charNeutral.SetActive(false);
+        charSurprised.SetActive(false);
+        charHappy.SetActive(false);
+        charEmbarrassed.SetActive(false);
+        charConfused.SetActive(false);
+        charSad.SetActive(false);
+        charExcited.SetActive(false);
+    }
+
+    void ShowExpression(string expression)
+    {
+        if (characterExpressionsHidden)
+            return;
+
+        HideAllExpressions();
+        switch (expression)
+        {
+            case "neutral":     charNeutral.SetActive(true); break;
+            case "surprised":   charSurprised.SetActive(true); break;
+            case "happy":       charHappy.SetActive(true); break;
+            case "smile":       charHappy.SetActive(true); break;
+            case "embarrassed": charEmbarrassed.SetActive(true); break;
+            case "confused":    charConfused.SetActive(true); break;
+            case "sad":         charSad.SetActive(true); break;
+            case "excited":     charExcited.SetActive(true); break;
+        }
+    }
+
+    IEnumerator EventStarter()
+    {
+        yield return new WaitForSeconds(2f);
+        fadeScreenIn.SetActive(false);
+        ShowExpression("neutral");
+        yield return new WaitForSeconds(2f);
+        mainTextObject.SetActive(true);
+        textBox.SetActive(true);
+        charName.GetComponent<TMP_Text>().text = "";
+
+        introIndex = 0;
+        yield return StartCoroutine(PlayIntroLine(introIndex));
+        eventPos = 0;
+    }
+
+    IEnumerator PlayIntroLine(int index)
+    {
+        nextButton.SetActive(false);
+
+        // Make sure the choices are hidden while normal dialogue is playing
+        if (ChoiceButton1 != null)
+            ChoiceButton1.SetActive(false);
+
+        if (ChoiceButton2 != null)
+            ChoiceButton2.SetActive(false);
+
+        if (ChoiceButton3 != null)
+            ChoiceButton3.SetActive(false);
+
+        isTyping = true;
+        switch (index)
+        {
+            case 0:
+                ShowExpression("smile");
+                textToSpeak = "[It wasn't long before they reached the end of the narrow passage...]";
+                break;
+            case 1:
+                ShowExpression("smile");
+                textToSpeak = "[...where they were met with a undusted grey door.]";
+                break;
+            case 2:
+                ShowExpression("smile");
+                textToSpeak = "[Bay noticed the handwritten text on the door:]";
+                break;
+            case 3:
+                ShowExpression("smile");
+                textToSpeak = "[\"The Hidden Colony\"]";
+                break;
+            case 4:
+                ShowExpression("smile");
+                textToSpeak = "[After what seemed like ages, Agnes finally broke the silence:]";
+                break;
+            case 5:
+                ShowExpression("smile");
+                textToSpeak = "Okay, here we are. The Hidden Colony.";
+                break;
+            case 6:
+                ShowExpression("smile");
+                textToSpeak = "All of us are Domeborn, we were born here in the Dome.";
+                break;
+            case 7:
+                ShowExpression("smile");
+                textToSpeak = "Come on, don't be too scared with the new faces.";
+                break;
+            case 8:
+                ShowExpression("smile");
+                textToSpeak = "I'm sure you'll like it, I'll tell you more later.";
+                break;
+            case 9:
+                ShowExpression("smile");
+                textToSpeak = "[Agnes stepped in front of him. and grabbed the handle.]";
+                break;
+            case 10:
+                ShowExpression("smile");
+                textToSpeak = "[Without twinking it twice, she twisted it and it swung open.]";
+                break;
+
+        }
+
+        charName.GetComponent<TMP_Text>().text = textToSpeak.StartsWith("[") ? "" : "Agnes";
+        textBox.GetComponent<TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1f);
+        yield return new WaitUntil(() => textLength >= currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+
+        if (textToSpeak == "Here we are.")
+        {
+            yield return StartCoroutine(FadeOutPictureAndCharacters());
+        }
+
+        // -------------------------------------------------
+        // CHOICE POINT (after the "[What do you say?]" line)
+        // -------------------------------------------------
+
+        if (index == ChoicePointIndex)
+        {
+            // Hide the normal next button
+            nextButton.SetActive(false);
+
+            // Show all three choices
+            if (ChoiceButton1 != null)
+                ChoiceButton1.SetActive(true);
+
+            if (ChoiceButton2 != null)
+                ChoiceButton2.SetActive(true);
+
+            if (ChoiceButton3 != null)
+                ChoiceButton3.SetActive(true);
+
+            isTyping = false;
+            yield break;
+        }
+
+        nextButton.SetActive(true);
+        isTyping = false;
+    }
+
+    // NextButton to be called by Unity UI OnClick
+    public void NextButton()
+    {
+        // -------------------------------------------------
+        // CHOICE DIALOGUE
+        // -------------------------------------------------
+
+        // If a choice dialogue is currently playing,
+        // Next should ONLY be used to advance the current
+        // choice line.
+        if (choiceDialoguePlaying)
+        {
+            if (waitingForChoiceNext)
+            {
+                // Hide the button immediately after clicking it
+                nextButton.SetActive(false);
+
+                // Allow PlayChoiceLine() to continue
+                waitingForChoiceNext = false;
+            }
+
+            return;
+        }
+
+        // -------------------------------------------------
+        // INTRO SEQUENCE
+        // -------------------------------------------------
+
+        if (isTyping) return; // Don't skip the typing animation
+
+        introIndex++;
+        if (introIndex <= ChoicePointIndex)
+        {
+            StartCoroutine(PlayIntroLine(introIndex));
+        }
+        else
+        {
+            StartCoroutine(EventFour());
+        }
+    }
+
+    // =====================================================
+    // CHOICE 1
+    // =====================================================
+
+    public void ChoiceButton1Pressed()
+    {
+        if (choiceDialoguePlaying)
+            return;
+
+        StartCoroutine(PlayChoice1());
+    }
+
+    IEnumerator PlayChoice1()
+    {
+        choiceDialoguePlaying = true;
+        HideChoiceButtons();
+
+        string[] choice1Dialogue =
+        {
+            "[Agnes turned to Bay with a smile on her face.]",
+            "Oh, that's a fancy codename for DCP officers",
+            "People don't even read these doors, they just assume it's for whatever business goes on in controlling the tubes.",
+            "Come on, let's go."
+        };
+
+        yield return StartCoroutine(PlayDialogueLines(choice1Dialogue));
+        yield return StartCoroutine(PlayDialogueLines(afterChoiceDialogue));
+
+        FinishChoice();
+    }
+
+    // =====================================================
+    // CHOICE 2
+    // =====================================================
+
+    public void ChoiceButton2Pressed()
+    {
+        if (choiceDialoguePlaying)
+            return;
+
+        StartCoroutine(PlayChoice2());
+    }
+
+    IEnumerator PlayChoice2()
+    {
+        choiceDialoguePlaying = true;
+        HideChoiceButtons();
+
+        string[] choice2Dialogue =
+        {
+            "[Agnes turned to Bay with a slow smile on her face.]",
+            "Oh, we're at the place",
+            "You'll learn soon enough. See that door sign? Domemployers is just a fancy codename for DCP officers.",
+            "Come on, we don't have time to spare!"
+        };
+
+        yield return StartCoroutine(PlayDialogueLines(choice2Dialogue));
+        yield return StartCoroutine(PlayDialogueLines(afterChoiceDialogue));
+
+        FinishChoice();
+    }
+
+    // =====================================================
+    // CHOICE 3  (OPT2: NEW RECRUIT?)
+    // =====================================================
+
+    public void ChoiceButton3Pressed()
+    {
+        if (choiceDialoguePlaying)
+            return;
+
+        StartCoroutine(PlayChoice3());
+    }
+
+    IEnumerator PlayChoice3()
+    {
+        choiceDialoguePlaying = true;
+        HideChoiceButtons();
+
+        string[] choice3Dialogue =
+        {
+            "[Agnes turned to Bay, with a natural yet enigmatic smile.]",
+            "Oh, you'll find it soon enough. Don't sweat it.",
+            "Hey, you see that door sign? Domemployers is just a codename for DCP officers.",
+            "Come on, let's not keep them waiting."
+        };
+
+        yield return StartCoroutine(PlayDialogueLines(choice3Dialogue));
+        yield return StartCoroutine(PlayDialogueLines(afterChoiceDialogue));
+
+        FinishChoice();
+    }
+
+    // =====================================================
+    // DIALOGUE THAT PLAYS AFTER ANY OF THE THREE CHOICES
+    // =====================================================
+
+    string[] afterChoiceDialogue =
+    {
+        "[Bay wasn't able to ask any further questions.]",
+        "[Agnes opened the door slowly so not to make any sound...]",
+        "[...and closed it right as they were both inside.]",
+        "[The place was dark save for the blinking lightbulbs above.]",
+        "[It was a narrow passage, yet Agnes was able to determine exactly where to go.]",
+        "[His question of whether she knew the place was slowly being answered.]",
+        "Follow me.",
+        "[Agnes whispered, they began to fast walk to avoid making any noise.]",
+        "[The atmosphere here was thicker than it was in the Tube.]",
+        "[It felt...]",
+        "[...suffocating.]",
+        "[He knew he had no choice but to follow her through the narrow passage...]",
+        "[...down wherever she planned to take him.]"
+    };
+
+    // =====================================================
+    // HELPERS
+    // =====================================================
+
+    void HideChoiceButtons()
+    {
+        if (ChoiceButton1 != null)
+            ChoiceButton1.SetActive(false);
+
+        if (ChoiceButton2 != null)
+            ChoiceButton2.SetActive(false);
+
+        if (ChoiceButton3 != null)
+            ChoiceButton3.SetActive(false);
+
+        nextButton.SetActive(false);
+    }
+
+    // Plays a list of dialogue lines one at a time.
+    // Each line waits for the player to click Next.
+    IEnumerator PlayDialogueLines(string[] lines)
+    {
+        for (int i = 0; i < lines.Length; i++)
+        {
+            yield return StartCoroutine(PlayChoiceLine(lines[i]));
+        }
+    }
+
+    IEnumerator PlayChoiceLine(string dialogueLine)
+    {
+        // Hide Next while the new line is typing
+        nextButton.SetActive(false);
+
+        // Make sure the waiting state is reset
+        waitingForChoiceNext = false;
+
+        // Set dialogue
+        textToSpeak = dialogueLine;
+        charName.GetComponent<TMP_Text>().text = textToSpeak.StartsWith("[") ? "" : "Agnes";
+
+        textBox.GetComponent<TMP_Text>().text = textToSpeak;
+
+        currentTextLength = textToSpeak.Length;
+
+        // Reset typewriter counter
+        TextCreator.charCount = 0;
+
+        // Start typewriter
+        TextCreator.runTextPrint = true;
+
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1f);
+
+        // Wait until the entire line has finished typing
+        yield return new WaitUntil(() => textLength >= currentTextLength);
+
+        if (dialogueLine == "[...and closed it right as they were both inside.]")
+        {
+            yield return StartCoroutine(FadeOutPictureOnly(Picture2));
+        }
+
+        // The line is completely typed.
+        // Show Next so the player can manually continue.
+        nextButton.SetActive(true);
+
+        // Tell NextButton() that we are waiting for a click.
+        waitingForChoiceNext = true;
+
+        // IMPORTANT:
+        // Do NOT continue automatically.
+        // Wait here until the player presses Next.
+        yield return new WaitUntil(() => waitingForChoiceNext == false);
+    }
+
+    GameObject[] GetCharacterImages()
+    {
+        return new GameObject[]
+        {
+            charNeutral,
+            charSurprised,
+            charHappy,
+            charEmbarrassed,
+            charConfused,
+            charSad,
+            charExcited
+        };
+    }
+
+    IEnumerator FadeOutPictureAndCharacters()
+    {
+        GameObject[] characters = GetCharacterImages();
+        characterWasActive = new bool[characters.Length];
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            characterWasActive[i] = characters[i] != null && characters[i].activeSelf;
+        }
+
+        characterExpressionsHidden = true;
+        yield return StartCoroutine(FadeObjects(Picture1, characters, false));
+    }
+
+    IEnumerator FadeOutPictureOnly(GameObject picture)
+    {
+        yield return StartCoroutine(FadeObjects(picture, new GameObject[0], false));
+    }
+
+    IEnumerator FadeInPictureAndCharacters()
+    {
+        GameObject[] characters = GetCharacterImages();
+        yield return StartCoroutine(FadeObjects(Picture1, characters, true));
+    }
+
+    IEnumerator FadeObjects(GameObject picture, GameObject[] characters, bool fadeIn)
+    {
+        int objectCount = characters.Length + 1;
+        CanvasGroup[] canvasGroups = new CanvasGroup[objectCount];
+        GameObject[] objects = new GameObject[objectCount];
+        objects[0] = picture;
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            objects[i + 1] = characters[i];
+        }
+
+        for (int i = 0; i < objectCount; i++)
+        {
+            if (objects[i] == null)
+                continue;
+
+            if (fadeIn && (i == 0 || characterWasActive == null || characterWasActive[i - 1]))
+                objects[i].SetActive(true);
+
+            canvasGroups[i] = objects[i].GetComponent<CanvasGroup>();
+            if (canvasGroups[i] == null)
+                canvasGroups[i] = objects[i].AddComponent<CanvasGroup>();
+        }
+
+        float[] startAlphas = new float[objectCount];
+        for (int i = 0; i < objectCount; i++)
+        {
+            if (canvasGroups[i] == null)
+                continue;
+
+            startAlphas[i] = fadeIn ? 0f : canvasGroups[i].alpha;
+            if (fadeIn)
+                canvasGroups[i].alpha = 0f;
+        }
+
+        float fadeDuration = 1f;
+        float timer = 0f;
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+
+            for (int i = 0; i < objectCount; i++)
+            {
+                if (canvasGroups[i] == null)
+                    continue;
+
+                float targetAlpha = fadeIn ? 1f : 0f;
+                canvasGroups[i].alpha = Mathf.Lerp(startAlphas[i], targetAlpha, timer / fadeDuration);
+            }
+
+            yield return null;
+        }
+
+        for (int i = 0; i < objectCount; i++)
+        {
+            if (canvasGroups[i] == null)
+                continue;
+
+            canvasGroups[i].alpha = fadeIn ? 1f : 0f;
+            if (!fadeIn)
+                objects[i].SetActive(false);
+        }
+    }
+
+    void FinishChoice()
+    {
+        choiceDialoguePlaying = false;
+
+        // Continue to next event
+        eventPos = 4;
+        StartCoroutine(EventFour());
+    }
+
+    IEnumerator EventFour()
+    {
+        nextButton.SetActive(false);
+        ShowExpression("happy");
+        textBox.SetActive(true);
+        fadeOut.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene(13);
+    }
+}
